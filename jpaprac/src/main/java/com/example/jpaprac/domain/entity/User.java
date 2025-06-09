@@ -1,4 +1,4 @@
-package com.example.jpaprac.entity;
+package com.example.jpaprac.domain.entity;
 
 import javax.persistence.*;
 
@@ -36,4 +36,27 @@ public class User extends Time{
         this.role = role;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public String getUserPwd() {
+        return userPwd;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

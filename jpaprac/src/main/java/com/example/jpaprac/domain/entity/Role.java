@@ -1,9 +1,9 @@
-package com.example.jpaprac.entity;
+package com.example.jpaprac.domain.entity;
 
 public enum Role {
 
-    GUEST("ROLE_GUEST", "손님"),
-    USER("ROLE_USER","일반 사용자"),
+    //GUEST("ROLE_GUEST", "손님"),
+    USER("ROLE_MEMBER","일반 사용자"),
     ADMIN("ROLE_ADMIN", "관리자");
 
     private final String roleName;

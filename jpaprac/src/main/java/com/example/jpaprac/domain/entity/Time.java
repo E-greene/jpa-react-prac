@@ -1,4 +1,4 @@
-package com.example.jpaprac.entity;
+package com.example.jpaprac.domain.entity;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -17,4 +17,12 @@ public class Time {
 
     @LastModifiedDate
     private LocalDateTime modifiedDate;
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public LocalDateTime getModifiedDate() {
+        return modifiedDate;
+    }
 }
