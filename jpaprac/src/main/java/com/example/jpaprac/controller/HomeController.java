@@ -12,7 +12,7 @@ public class HomeController {
     @GetMapping("/home")
     public ResponseEntity<String> home() {
 
-        String myData = "나와라";
+        String myData = "WELCOME";
         return ResponseEntity.ok(myData);
     }
 }
