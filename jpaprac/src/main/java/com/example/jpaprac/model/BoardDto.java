@@ -12,6 +12,10 @@ public class BoardDto {
     private LocalDateTime createdDate;
     private LocalDateTime modifiedDate;
 
+    public BoardDto() {
+
+    }
+
     public BoardDto(Long id, Long userId, String title, String content,
                     LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;

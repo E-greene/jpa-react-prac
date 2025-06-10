@@ -1,8 +1,10 @@
 package com.example.jpaprac.domain.entity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "users") //테이블명 user가 예약어라는 error
 public class User extends Time{
 
     @Id
@@ -16,10 +18,10 @@ public class User extends Time{
     private String email;
 
     @Column
-    private String userId;
+    private String loginId;
 
     @Column
-    private String userPwd;
+    private String loginPwd;
 
     @Enumerated(EnumType.STRING) // db에 문자열로 저장하기 위함
     @Column
@@ -29,10 +31,12 @@ public class User extends Time{
 
     }
 
-    public User(Long id, String name, String userId, String userPwd, String email, Role role) {
+    public User(Long id, String name, String email, String loginId, String loginPwd, Role role) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.loginId = loginId;
+        this.loginPwd = loginPwd;
         this.role = role;
     }
 
@@ -44,12 +48,12 @@ public class User extends Time{
         return role;
     }
 
-    public String getUserPwd() {
-        return userPwd;
+    public String getLoginPwd() {
+        return loginPwd;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getLoginId() {
+        return loginId;
     }
 
     public String getName() {
