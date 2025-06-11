@@ -23,7 +23,12 @@ public class BoardController {
         return boardService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{userId}")
+    public List<BoardDto> findByUserId(@PathVariable Long userId) {
+        return boardService.findBoardsByUserId(userId);
+    }
+
+    @GetMapping("/detail/{id}")
     public BoardDto findById(@PathVariable Long id) {
         return boardService.findById(id);
     }

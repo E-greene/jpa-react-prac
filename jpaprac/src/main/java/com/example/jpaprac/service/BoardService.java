@@ -31,6 +31,13 @@ public class BoardService {
                 .collect(Collectors.toList());
     }
 
+    public List<BoardDto> findBoardsByUserId(Long userId) {
+        List<Board> boards = boardRepository.findByUserId(userId);
+        return boards.stream()
+                .map(BoardDto::fromEntity)
+                .collect(Collectors.toList());
+    }
+
 //    public Board findById(Long id) {
 //        return boardRepository.findById(id);
 //    }
