@@ -31,9 +31,9 @@ function Home() {
     }
 
     useEffect(() => {
-        fetch('/api/home')
-        .then(res => res.text())
-        .then(text => setData(text));
+        axios.get('/home')
+        .then(res => setData(res.data))
+        .catch(err => console.error(err));
     }, []);
     
     return (

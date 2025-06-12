@@ -20,10 +20,6 @@ public class BoardService {
         this.boardRepository = boardRepository;
     }
 
-//    public List<Board> findAll() {
-//        return boardRepository.findAll();
-//    }
-
     @Transactional(readOnly = true)
     public List<BoardDto> findAll() {
         return boardRepository.findAll().stream()
@@ -38,9 +34,6 @@ public class BoardService {
                 .collect(Collectors.toList());
     }
 
-//    public Board findById(Long id) {
-//        return boardRepository.findById(id);
-//    }
     @Transactional(readOnly = true)
     public BoardDto findById(Long id) {
         Board board = boardRepository.findById(id)
@@ -48,18 +41,12 @@ public class BoardService {
         return BoardDto.fromEntity(board);
     }
 
-//    public Board save(Board board) {
-//        return boardRepository.save(board);
-//    }
     @Transactional
     public Long saveBoardById(BoardDto dto) {
         Board savedBoard = boardRepository.save(BoardDto.toEntity(dto));
         return BoardDto.fromEntity(savedBoard).getId();
     }
 
-//    public void delete(Long id) {
-//        boardRepository.deleteById(id);
-//    }
     @Transactional
     public Long updateBoardById(Long id, BoardDto dto) {
         Board board = boardRepository.findById(id)

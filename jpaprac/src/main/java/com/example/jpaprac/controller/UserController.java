@@ -3,6 +3,7 @@ package com.example.jpaprac.controller;
 import com.example.jpaprac.model.UserDto;
 import com.example.jpaprac.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,9 +24,14 @@ public class UserController {
 
     //회원가입
     @PostMapping("/signUp")
-    public ResponseEntity<UserDto> signUp(@RequestBody UserDto dto) {
-        UserDto savedUser = userService.signUp(dto);
-        return ResponseEntity.ok(savedUser);
+    public ResponseEntity<?> signUp(@RequestBody UserDto dto) {
+        try {
+            UserDto savedUser = userService.signUp(dto);
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
     }
 
     //로그인

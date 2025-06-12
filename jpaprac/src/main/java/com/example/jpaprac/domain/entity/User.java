@@ -25,7 +25,7 @@ public class User extends Time{
 
     @Enumerated(EnumType.STRING) // db에 문자열로 저장하기 위함
     @Column
-    private Role role;
+    private Role role = Role.USER;
 
     public User() {
 
