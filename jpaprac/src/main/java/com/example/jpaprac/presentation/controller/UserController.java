@@ -1,7 +1,7 @@
-package com.example.jpaprac.controller;
+package com.example.jpaprac.presentation.controller;
 
-import com.example.jpaprac.model.UserDto;
-import com.example.jpaprac.service.UserService;
+import com.example.jpaprac.presentation.model.UserDto;
+import com.example.jpaprac.application.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

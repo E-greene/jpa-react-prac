@@ -1,4 +1,4 @@
-package com.example.jpaprac.model;
+package com.example.jpaprac.presentation.model;
 
 import com.example.jpaprac.domain.entity.Board;
 
@@ -46,47 +46,23 @@ public class BoardDto {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getModifiedDate() {
-        return modifiedDate;
-    }
-
-    public void setModifiedDate(LocalDateTime modifiedDate) {
-        this.modifiedDate = modifiedDate;
-    }
-
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public LocalDateTime getModifiedDate() {
+        return modifiedDate;
     }
 }

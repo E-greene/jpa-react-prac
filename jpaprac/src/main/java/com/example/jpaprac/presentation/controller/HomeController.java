@@ -1,4 +1,4 @@
-package com.example.jpaprac.controller;
+package com.example.jpaprac.presentation.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

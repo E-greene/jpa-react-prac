@@ -1,11 +1,12 @@
 package com.example.jpaprac.domain.entity;
 
+import com.example.jpaprac.domain.common.BaseTimeEntity;
+
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "users") //테이블명 user가 예약어라는 error
-public class User extends Time{
+@Table(name = "users")
+public class User extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment

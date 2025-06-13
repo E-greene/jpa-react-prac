@@ -1,7 +1,7 @@
-package com.example.jpaprac.controller;
+package com.example.jpaprac.presentation.controller;
 
-import com.example.jpaprac.model.BoardDto;
-import com.example.jpaprac.service.BoardService;
+import com.example.jpaprac.presentation.model.BoardDto;
+import com.example.jpaprac.application.service.board.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

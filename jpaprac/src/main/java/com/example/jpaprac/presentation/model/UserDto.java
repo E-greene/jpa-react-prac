@@ -1,9 +1,7 @@
-package com.example.jpaprac.model;
+package com.example.jpaprac.presentation.model;
 
 import com.example.jpaprac.domain.entity.Role;
 import com.example.jpaprac.domain.entity.User;
-
-import java.time.LocalDateTime;
 
 public class UserDto {
 
@@ -46,48 +44,23 @@ public class UserDto {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getLoginId() {
         return loginId;
-    }
-
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
     }
 
     public String getLoginPwd() {
         return loginPwd;
     }
 
-    public void setLoginPwd(String loginPwd) {
-        this.loginPwd = loginPwd;
-    }
-
     public Role getRole() {
         return role;
     }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
 }

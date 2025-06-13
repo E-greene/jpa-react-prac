@@ -1,9 +1,11 @@
 package com.example.jpaprac.domain.entity;
 
+import com.example.jpaprac.domain.common.BaseTimeEntity;
+
 import javax.persistence.*;
 
 @Entity
-public class Board extends Time {
+public class Board extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -1,8 +1,8 @@
-package com.example.jpaprac.service;
+package com.example.jpaprac.application.service.user;
 
 import com.example.jpaprac.domain.entity.User;
-import com.example.jpaprac.model.UserDto;
-import com.example.jpaprac.domain.reposirory.UserRepository;
+import com.example.jpaprac.presentation.model.UserDto;
+import com.example.jpaprac.domain.repository.user.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

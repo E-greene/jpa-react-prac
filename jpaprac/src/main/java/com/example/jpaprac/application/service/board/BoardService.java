@@ -1,8 +1,8 @@
-package com.example.jpaprac.service;
+package com.example.jpaprac.application.service.board;
 
 import com.example.jpaprac.domain.entity.Board;
-import com.example.jpaprac.model.BoardDto;
-import com.example.jpaprac.domain.reposirory.BoardRepository;
+import com.example.jpaprac.presentation.model.BoardDto;
+import com.example.jpaprac.domain.repository.board.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
