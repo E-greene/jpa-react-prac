@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass // 이 클래스를 상속한 엔티티들이 해당 필드를 갖게됨 //공통 필드를 상속용으로 만든 클래스
 @EntityListeners(AuditingEntityListener.class) //springdata JPA의 auduting 기능을 작동시키기위함
-public class Time {
+public class BaseTimeEntity {
 
     @CreatedDate
     private LocalDateTime createdDate;

@@ -2,7 +2,7 @@ package com.example.jpaprac.service;
 
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.model.BoardDto;
-import com.example.jpaprac.reposirory.BoardRepository;
+import com.example.jpaprac.domain.reposirory.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
