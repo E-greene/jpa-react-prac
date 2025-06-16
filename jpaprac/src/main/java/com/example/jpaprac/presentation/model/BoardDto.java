@@ -1,6 +1,7 @@
 package com.example.jpaprac.presentation.model;
 
 import com.example.jpaprac.domain.entity.Board;
+import com.example.jpaprac.domain.entity.User;
 
 import java.time.LocalDateTime;
 
@@ -30,7 +31,7 @@ public class BoardDto {
     public static BoardDto fromEntity(Board board) {
         return new BoardDto(
                 board.getId(),
-                board.getUserId(),
+                board.getUser().getId(),
                 board.getTitle(),
                 board.getContent(),
                 board.getCreatedDate(),
@@ -38,8 +39,8 @@ public class BoardDto {
         );
     }
 
-    public static Board toEntity(BoardDto dto) {
-        return new Board(dto.getId(),dto.getUserId(), dto.getTitle(), dto.getContent());
+    public static Board toEntity(BoardDto dto, User user) {
+        return new Board(dto.getId(),user, dto.getTitle(), dto.getContent());
     }
 
     public Long getId() {

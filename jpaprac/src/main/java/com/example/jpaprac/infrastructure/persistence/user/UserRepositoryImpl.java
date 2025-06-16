@@ -17,17 +17,5 @@ public class UserRepositoryImpl implements UserRepository {
         this.userJpaRepository = userJpaRepository;
     }
 
-    @Override
-    public Optional<User> findByLoginId(String loginId) {
-        return userJpaRepository.findByLoginId(loginId);
-    }
 
-    @Override
-    public Optional<User> findByLoginIdAndLoginPwd(String loginId, String loginPwd) {
-        return userJpaRepository.findByLoginIdAndLoginPwd(loginId, loginPwd);
-    }
-
-    public User save(User dto) {
-        return userJpaRepository.save(dto);
-    }
 }

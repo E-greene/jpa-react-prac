@@ -5,13 +5,15 @@ import com.example.jpaprac.domain.common.BaseTimeEntity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "boards")
 public class Board extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private Long userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column
     private String title;
@@ -23,9 +25,9 @@ public class Board extends BaseTimeEntity {
 
     }
 
-    public Board(Long id,Long userId, String title, String content) {
+    public Board(Long id,User user, String title, String content) {
         this.id = id;
-        this.userId = userId;
+        this.user = user;
         this.title = title;
         this.content = content;
     }
@@ -34,8 +36,8 @@ public class Board extends BaseTimeEntity {
         return id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
     public String getTitle() {
