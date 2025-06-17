@@ -5,5 +5,5 @@ import com.example.jpaprac.domain.entity.User;
 import java.util.Optional;
 
 public interface UserRepository {
-
+    User findById(Long userId);
 }

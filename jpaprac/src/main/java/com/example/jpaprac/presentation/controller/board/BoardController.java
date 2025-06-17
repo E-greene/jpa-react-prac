@@ -25,9 +25,9 @@ public class BoardController {
     }
     
     //게시글 단건 조회
-    @GetMapping("/{id}")
-    public BoardDto getBoardById(@PathVariable Long id) {
-        return boardService.findById(id);
+    @GetMapping("/{boardId}")
+    public BoardDto getBoardById(@PathVariable Long boardId) {
+        return boardService.findById(boardId);
     }
     
     //게시글 생성
@@ -37,15 +37,15 @@ public class BoardController {
     }
     
     //게시글 수정
-    @PutMapping("/{id}")
-    public BoardDto updateBoard(@PathVariable Long id, @RequestBody BoardDto dto) {
-        return boardService.updateBoardById(id, dto);
+    @PutMapping("/{boardId}")
+    public BoardDto updateBoard(@PathVariable Long boardId, @RequestBody BoardDto dto) {
+        return boardService.updateBoardById(boardId, dto);
     }
     
     //게시글 삭제
-    @DeleteMapping("/{id}")
-    public void deleteBoard(@PathVariable Long id) {
-        boardService.deleteBoardById(id);
+    @DeleteMapping("/{boardId}")
+    public void deleteBoard(@PathVariable Long boardId) {
+        boardService.deleteBoardById(boardId);
     }
 
 

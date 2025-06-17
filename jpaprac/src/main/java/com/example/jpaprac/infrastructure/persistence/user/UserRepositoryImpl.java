@@ -17,5 +17,7 @@ public class UserRepositoryImpl implements UserRepository {
         this.userJpaRepository = userJpaRepository;
     }
 
-
+    public User findById(Long id) {
+        return userJpaRepository.findById(id).orElse(null);
+    }
 }

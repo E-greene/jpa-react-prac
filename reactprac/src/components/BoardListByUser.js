@@ -1,13 +1,16 @@
 import React, {useEffect, useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 const BoardListByUser = () => {
+    const navigate = useNavigate();
     const [boards, setBoards] = useState([]);
-    const userId = localStorage.getItem("userId");
-
+    
     useEffect(() => {
+        const userId = localStorage.getItem("userId");
+        console.log("userId : "+userId);
         if(userId) {
-            axios.get(`http://localhost:8080/boards/${userId}`)
+            axios.get(`http://localhost:8080/users/${userId}/boards`)
                 .then((res) => {
                     setBoards(res.data);
                 })
@@ -15,7 +18,11 @@ const BoardListByUser = () => {
                     console.error("실패", err);
                 });
         }
-    }, [userId]);
+    }, []);
+
+    const handleCreatePost = () => {
+        navigate("/createBoard");
+    };
 
     return (
         <div class="board-container">
@@ -30,14 +37,21 @@ const BoardListByUser = () => {
                 </thead>
                 <tbody>
                 {boards.map((board) => (
-                    <tr key={board.id}>
+                    <tr key={board.id} onClick={() => navigate(`/board/${board.id}`)} style={{cursor: "pointer"}}>
                     <td>{board.title}</td>
                     <td>{board.content}</td>
-                    <td>{new Date(board.createdAt).toLocaleString()}</td>
+                    <td>{new Date(board.createdDate).toLocaleString()}</td>
                     </tr>
                 ))}
                 </tbody>
             </table>
+
+            <button
+                className="create-post-button"
+                onClick={handleCreatePost}
+            >
+                게시물 작성
+            </button>
         </div>
     )
 };

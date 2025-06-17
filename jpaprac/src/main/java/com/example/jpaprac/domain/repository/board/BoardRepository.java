@@ -8,7 +8,7 @@ import java.util.List;
 public interface BoardRepository {
     List<Board> findAll();
     List<Board> findByUserId(Long userId);
-    Board findById(Long id);
+    Board findById(Long boardId);
     Board save(Board board);
-    void deleteById(Long id);
+    void deleteById(Long boardId);
 }

@@ -37,7 +37,8 @@ public class UserDto {
     }
 
     public static User toEntity(UserDto dto) {
-        return new User(dto.getId(), dto.getName(), dto.getEmail(),dto.getLoginId(), dto.getLoginPwd(), dto.getRole());
+        Role role = dto.getRole() != null ? dto.getRole() : Role.USER;
+        return new User(dto.getId(), dto.getName(), dto.getEmail(),dto.getLoginId(), dto.getLoginPwd(), role);
     }
 
     public Long getId() {

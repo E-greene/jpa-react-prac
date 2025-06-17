@@ -26,7 +26,7 @@ public class User extends BaseTimeEntity {
 
     @Enumerated(EnumType.STRING) // db에 문자열로 저장하기 위함
     @Column
-    private Role role = Role.USER;
+    private Role role;
 
     public User() {
 

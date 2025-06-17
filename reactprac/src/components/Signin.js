@@ -12,17 +12,17 @@ function Singin() {
 
     const handleSignup = (e) => {
         e.preventDefault(); // 폼 기본제출 방지
-        axios.post("http://localhost:8080/user/signUp", {
+        axios.post("http://localhost:8080/auths/signUp", {
             loginId,
             loginPwd,
             name,
             email
         }).then((res) => {
             alert(' 회원가입 완료');
-            navigate('/api/home');
+            navigate('/home');
         }).catch((err) => {
             console.error(err);
-            alert(err.response?.data || "회원가입 실패");
+            alert(err.response? err.response.data : "회원가입 실패");
         });
     }
 
@@ -34,23 +34,6 @@ function Singin() {
     else if (name === "name") setName(value);
     else if (name === "email") setEmail(value);
     };
-
-    // const handleSignup = async () => {
-    //     try {
-    //         const response = await axios.post('/user/signUp', {
-    //             loginId,
-    //             loginPwd,
-    //             name,
-    //             email
-    //         });
-
-    //         alert('회원가입 완료');
-    //         navigate('/api/home');
-    //     } catch (error) {
-    //         alert(error.response?.data?.message || '회원가입 실패');
-    //     }
-    // }
-
 
     return (
         <form onSubmit={handleSignup}>

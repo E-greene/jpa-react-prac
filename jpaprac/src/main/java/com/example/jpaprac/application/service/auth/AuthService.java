@@ -3,6 +3,7 @@ package com.example.jpaprac.application.service.auth;
 import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.domain.repository.auth.AuthRepository;
 import com.example.jpaprac.presentation.model.UserDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,6 +14,7 @@ public class AuthService {
 
     private final AuthRepository authRepository;
 
+    @Autowired
     public AuthService(AuthRepository authRepository) {
         this.authRepository = authRepository;
     }

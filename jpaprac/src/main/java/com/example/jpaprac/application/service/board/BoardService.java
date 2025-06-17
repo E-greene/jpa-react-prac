@@ -45,8 +45,8 @@ public class BoardService {
     
     //게시글 단건조회
     @Transactional(readOnly = true)
-    public BoardDto findById(Long id) {
-        Board board = boardRepository.findById(id);
+    public BoardDto findById(Long boardId) {
+        Board board = boardRepository.findById(boardId);
         if(board == null) {
             throw new BoardNotFoundException("게시글이 존재하지 않습니다.");
         }
@@ -67,8 +67,8 @@ public class BoardService {
     
     //게시글 수정
     @Transactional
-    public BoardDto updateBoardById(Long id, BoardDto dto) {
-        Board board = boardRepository.findById(id);
+    public BoardDto updateBoardById(Long boardId, BoardDto dto) {
+        Board board = boardRepository.findById(boardId);
         if(board == null) {
             throw new BoardNotFoundException("게시글이 존재하지 않습니다.");
         }
@@ -80,7 +80,7 @@ public class BoardService {
     
     //게시글 삭제
     @Transactional
-    public void deleteBoardById(Long id) {
-        boardRepository.deleteById(id);
+    public void deleteBoardById(Long boardId) {
+        boardRepository.deleteById(boardId);
     }
 }

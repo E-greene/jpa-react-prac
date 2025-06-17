@@ -2,9 +2,11 @@ package com.example.jpaprac.infrastructure.persistence.board;
 
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.domain.repository.board.BoardRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class BoardRepositoryImpl implements BoardRepository {
 
     private final BoardJpaRepository boardJpaRepository;
@@ -19,7 +21,7 @@ public class BoardRepositoryImpl implements BoardRepository {
     }
 
     public Board findById(Long id) {
-        return boardJpaRepository.findById(id);
+        return boardJpaRepository.findById(id).orElse(null);
     }
 
     public List<Board> findByUserId(Long userId) {

@@ -11,18 +11,21 @@ function Home() {
     const handleLogin = (e) => {
         e.preventDefault();
         //로그인요청 보내기
-        axios.post("http://localhost:8080/user/login", {
+        axios.post("http://localhost:8080/auths/login", {
             loginId,
             loginPwd
         })
         .then((res) => {
             const userData = res.data; //로그인한 사용자 정보
+            console.log("로그인후 userData : " + userData);
+            console.log("로그인후 userData : " + userData.id);
 
             //사용자 정보 로컬스토리지에 저장
             localStorage.setItem("user", JSON.stringify(userData));
+            localStorage.setItem("userId", userData.id);
 
             alert('로그인하셨습니다');
-            navigate("/api/boardList");
+            navigate("/boardList");
         })
         .catch((err) => {
             console.error(err);
@@ -50,7 +53,7 @@ function Home() {
                 <button className="button">로그인</button>           
             </form>
                 <div>
-                    <button className="button" onClick={() => navigate('/api/signin')}>회원가입</button>
+                    <button className="button" onClick={() => navigate('/signin')}>회원가입</button>
                 </div>
             </div>
         </div>
