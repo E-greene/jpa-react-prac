@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 public class BoardDto {
     private Long id;
     private Long userId;
+    private String userName;
     private String title;
     private String content;
     private LocalDateTime createdDate;
@@ -17,10 +18,11 @@ public class BoardDto {
 
     }
 
-    public BoardDto(Long id, Long userId, String title, String content,
+    public BoardDto(Long id, Long userId, String userName, String title, String content,
                     LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
         this.userId = userId;
+        this.userName = userName;
         this.title = title;
         this.content = content;
         this.createdDate = createdDate;
@@ -32,6 +34,7 @@ public class BoardDto {
         return new BoardDto(
                 board.getId(),
                 board.getUser().getId(),
+                board.getUser().getName(),
                 board.getTitle(),
                 board.getContent(),
                 board.getCreatedDate(),

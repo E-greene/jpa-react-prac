@@ -17,15 +17,15 @@ public class BoardRepositoryImpl implements BoardRepository {
 
     @Override
     public List<Board> findAll() {
-        return boardJpaRepository.findAll();
+        return boardJpaRepository.findAllByDeleteYN("N");
     }
 
     public Board findById(Long id) {
-        return boardJpaRepository.findById(id).orElse(null);
+        return boardJpaRepository.findByIdAndDeleteYN(id, "N").orElse(null);
     }
 
     public List<Board> findByUserId(Long userId) {
-        return boardJpaRepository.findByUserId(userId);
+        return boardJpaRepository.findByUserIdAndDeleteYN(userId, "N");
     }
 
     public Board save(Board board) {

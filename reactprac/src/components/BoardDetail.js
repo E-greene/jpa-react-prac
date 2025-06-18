@@ -7,8 +7,10 @@ const BoardDetail = () => {
     const {boardId} = useParams();
     const navigate = useNavigate();
     const [board, setBoard] = useState(null);
+    const [myUserId, setMyUserId] = useState(null);
 
     useEffect(() => {
+        setMyUserId(localStorage.getItem("userId"));
         axios.get(`http://localhost:8080/boards/${boardId}`)
             .then(res => setBoard(res.data))
             .catch(err => {
@@ -18,6 +20,8 @@ const BoardDetail = () => {
     }, [boardId, navigate]);
 
     if(!board) return null;
+
+    const isMine = String(myUserId) === String(board.userId);
 
     return (
         <div className="create-board-container">
@@ -29,7 +33,9 @@ const BoardDetail = () => {
                 <div>
                     <textarea value={board.content} readOnly />
                 </div>
-                <button type="button" onClick={() => navigate(`/editBoard/${board.id}`)} style={{background: '#2e7d32'}}>수정</button>
+                {isMine ? <button type="button" onClick={() => navigate(`/editBoard/${board.id}`)} style={{background: '#2e7d32'}}>수정</button>
+                        : null                
+                }
             </form>
         </div>
     );

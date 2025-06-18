@@ -21,6 +21,9 @@ public class Board extends BaseTimeEntity {
     @Column
     private String content;
 
+    @Column
+    private String deleteYN; //Y으로 기본값 설정
+
     public Board() {
 
     }
@@ -30,6 +33,7 @@ public class Board extends BaseTimeEntity {
         this.user = user;
         this.title = title;
         this.content = content;
+        this.deleteYN = "N";
     }
 
     public Long getId() {
@@ -48,8 +52,16 @@ public class Board extends BaseTimeEntity {
         return content;
     }
 
+    public String getDeleteYN() {
+        return deleteYN;
+    }
+
     public void update(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public void softDelete() {
+        this.deleteYN = "Y";
     }
 }

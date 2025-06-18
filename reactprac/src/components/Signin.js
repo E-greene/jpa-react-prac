@@ -40,16 +40,16 @@ function Singin() {
             <div className="container">
                 <h1>회원가입</h1>
                 <div className="input-box">
-                    <input type="text" placeholder="아이디를 입력하세요" name="loginId" value={loginId} onChange={handleChange} />
+                    <input type="text" placeholder="아이디를 입력하세요" name="loginId" value={loginId} onChange={handleChange} required/>
                 </div>
                 <div className="input-box">
-                    <input type="password" placeholder="비밀번호를 입력하세요" name="loginPwd" value={loginPwd} onChange={handleChange} />
+                    <input type="password" placeholder="비밀번호를 입력하세요" name="loginPwd" value={loginPwd} onChange={handleChange} required/>
                 </div>
                 <div className="input-box">
-                    <input type="text" placeholder="이름을 입력하세요" name="name" value={name} onChange={handleChange} />
+                    <input type="text" placeholder="이름을 입력하세요" name="name" value={name} onChange={handleChange} required/>
                 </div>
                 <div className="input-box">
-                    <input type="text" placeholder="이메일을 입력하세요" name="email" value={email} onChange={handleChange} />
+                    <input type="text" placeholder="이메일을 입력하세요" name="email" value={email} onChange={handleChange} required/>
                 </div>
                 <button className="button">가입</button>
             </div>

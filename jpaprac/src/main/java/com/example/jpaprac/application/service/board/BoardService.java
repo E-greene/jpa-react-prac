@@ -81,6 +81,10 @@ public class BoardService {
     //게시글 삭제
     @Transactional
     public void deleteBoardById(Long boardId) {
-        boardRepository.deleteById(boardId);
+        Board board = boardRepository.findById(boardId);
+        if(board == null) {
+            throw new BoardNotFoundException("게시글이 존재하지 않습니다.");
+        }
+        board.softDelete();
     }
 }
