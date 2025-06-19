@@ -21,13 +21,13 @@ public class BoardController {
     //전체게시글 목록 조회
     @GetMapping
     public List<BoardDto> getAllBoards() {
-        return boardService.findAll();
+        return boardService.findAllWithUser();
     }
     
     //게시글 단건 조회
     @GetMapping("/{boardId}")
     public BoardDto getBoardById(@PathVariable Long boardId) {
-        return boardService.findById(boardId);
+        return boardService.findByIdWithUser(boardId);
     }
     
     //게시글 생성

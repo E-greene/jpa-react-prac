@@ -19,7 +19,7 @@ function Singin() {
             email
         }).then((res) => {
             alert(' 회원가입 완료');
-            navigate('/home');
+            navigate('/login');
         }).catch((err) => {
             console.error(err);
             alert(err.response? err.response.data : "회원가입 실패");

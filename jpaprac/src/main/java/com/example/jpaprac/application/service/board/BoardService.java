@@ -33,6 +33,14 @@ public class BoardService {
                 .map(BoardDto::fromEntity)
                 .collect(Collectors.toList());
     }
+
+    //전체 게시글 조회 (작성자포함)
+    @Transactional(readOnly = true)
+    public List<BoardDto> findAllWithUser() {
+        return boardRepository.findAllWithUser().stream()
+                .map(BoardDto::fromEntity)
+                .collect(Collectors.toList());
+    }
     
     //사용자 ID로 게시글 조회
     @Transactional
@@ -47,6 +55,16 @@ public class BoardService {
     @Transactional(readOnly = true)
     public BoardDto findById(Long boardId) {
         Board board = boardRepository.findById(boardId);
+        if(board == null) {
+            throw new BoardNotFoundException("게시글이 존재하지 않습니다.");
+        }
+        return BoardDto.fromEntity(board);
+    }
+
+    //게시글 단건조회 (작성자포함)
+    @Transactional(readOnly = true)
+    public BoardDto findByIdWithUser(Long boardId) {
+        Board board = boardRepository.findByIdWithUser(boardId);
         if(board == null) {
             throw new BoardNotFoundException("게시글이 존재하지 않습니다.");
         }

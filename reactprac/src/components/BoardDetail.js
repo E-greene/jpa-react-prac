@@ -28,6 +28,9 @@ const BoardDetail = () => {
             <h2>게시글 상세보기</h2>
             <form>
                 <div>
+                    작성자 : {board.userName}
+                </div>
+                <div>
                     <input type="text" value={board.title} readOnly/>
                 </div>
                 <div>

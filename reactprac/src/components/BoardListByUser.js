@@ -26,7 +26,7 @@ const BoardListByUser = () => {
 
     return (
         <div class="board-container">
-            <h2>게시물 목록</h2>
+            <h2>나의 게시물</h2>
             <table border="1" cellPadding="10" cellSpacing="0">
                 <thead>
                 <tr>

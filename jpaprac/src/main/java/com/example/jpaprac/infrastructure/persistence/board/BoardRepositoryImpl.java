@@ -20,19 +20,33 @@ public class BoardRepositoryImpl implements BoardRepository {
         return boardJpaRepository.findAllByDeleteYN("N");
     }
 
+    @Override
     public Board findById(Long id) {
         return boardJpaRepository.findByIdAndDeleteYN(id, "N").orElse(null);
     }
 
+    @Override
     public List<Board> findByUserId(Long userId) {
         return boardJpaRepository.findByUserIdAndDeleteYN(userId, "N");
     }
 
+    @Override
     public Board save(Board board) {
         return boardJpaRepository.save(board);
     }
 
+    @Override
     public void deleteById(Long id) {
         boardJpaRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Board> findAllWithUser() {
+        return boardJpaRepository.findAllWithUser("N");
+    }
+
+    @Override
+    public Board findByIdWithUser(Long boardId) {
+        return boardJpaRepository.findByIdWithUser(boardId, "N").orElse(null);
     }
 }

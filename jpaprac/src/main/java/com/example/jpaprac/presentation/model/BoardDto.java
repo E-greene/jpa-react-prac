@@ -54,6 +54,10 @@ public class BoardDto {
         return userId;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
     public String getTitle() {
         return title;
     }
