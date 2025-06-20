@@ -33,7 +33,7 @@ public class Comment extends BaseTimeEntity {
     private List<Comment> children = new ArrayList<>();
 
     @Column
-    private String deleteStatus;
+    private String deleteYN;
 
     public Comment() {}
 
@@ -63,5 +63,9 @@ public class Comment extends BaseTimeEntity {
 
     public Comment getParent() {
         return parent;
+    }
+
+    public String getDeleteYN() {
+        return deleteYN;
     }
 }

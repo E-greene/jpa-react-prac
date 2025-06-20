@@ -1,6 +1,6 @@
 package com.example.jpaprac.presentation.controller.board;
 
-import com.example.jpaprac.presentation.model.BoardDto;
+import com.example.jpaprac.presentation.model.board.BoardDto;
 import com.example.jpaprac.application.service.board.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,7 @@ public class BoardController {
     public BoardController(BoardService boardService) {
         this.boardService = boardService;
     }
-    
+
     //전체게시글 목록 조회
     @GetMapping
     public List<BoardDto> getAllBoards() {

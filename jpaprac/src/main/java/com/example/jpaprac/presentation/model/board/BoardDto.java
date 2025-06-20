@@ -1,4 +1,4 @@
-package com.example.jpaprac.presentation.model;
+package com.example.jpaprac.presentation.model.board;
 
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.domain.entity.User;
@@ -11,34 +11,29 @@ public class BoardDto {
     private String userName;
     private String title;
     private String content;
-    private LocalDateTime createdDate;
-    private LocalDateTime modifiedDate;
 
     public BoardDto() {
 
     }
 
-    public BoardDto(Long id, Long userId, String userName, String title, String content,
-                    LocalDateTime createdDate, LocalDateTime modifiedDate) {
+    public BoardDto(Long id, Long userId, String userName, String title, String content) {
         this.id = id;
         this.userId = userId;
         this.userName = userName;
         this.title = title;
         this.content = content;
-        this.createdDate = createdDate;
-        this.modifiedDate = modifiedDate;
     }
 
 
     public static BoardDto fromEntity(Board board) {
+        System.out.println("fromEntity======user: " + board.getUser());
+        System.out.println("fromEntity======userName: " + board.getUser().getName());
         return new BoardDto(
                 board.getId(),
                 board.getUser().getId(),
                 board.getUser().getName(),
                 board.getTitle(),
-                board.getContent(),
-                board.getCreatedDate(),
-                board.getModifiedDate()
+                board.getContent()
         );
     }
 
@@ -64,13 +59,5 @@ public class BoardDto {
 
     public String getContent() {
         return content;
-    }
-
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
-    }
-
-    public LocalDateTime getModifiedDate() {
-        return modifiedDate;
     }
 }

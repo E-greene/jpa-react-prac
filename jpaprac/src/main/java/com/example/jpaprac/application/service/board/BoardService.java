@@ -4,7 +4,7 @@ import com.example.jpaprac.domain.common.exception.BoardNotFoundException;
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.domain.repository.user.UserRepository;
-import com.example.jpaprac.presentation.model.BoardDto;
+import com.example.jpaprac.presentation.model.board.BoardDto;
 import com.example.jpaprac.domain.repository.board.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

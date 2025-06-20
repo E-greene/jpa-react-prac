@@ -1,4 +1,4 @@
-package com.example.jpaprac.presentation.model;
+package com.example.jpaprac.presentation.model.user;
 
 import com.example.jpaprac.domain.entity.Role;
 import com.example.jpaprac.domain.entity.User;
