@@ -1,4 +1,4 @@
-package com.example.jpaprac.presentation.model.comment;
+package com.example.jpaprac.presentation.dto.comment;
 
 import java.util.ArrayList;
 import java.util.List;

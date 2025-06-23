@@ -1,7 +1,7 @@
 package com.example.jpaprac.presentation.controller.auth;
 
 import com.example.jpaprac.application.service.auth.AuthService;
-import com.example.jpaprac.presentation.model.user.UserDto;
+import com.example.jpaprac.presentation.dto.user.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

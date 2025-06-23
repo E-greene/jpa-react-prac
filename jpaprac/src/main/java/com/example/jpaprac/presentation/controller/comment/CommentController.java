@@ -1,7 +1,7 @@
 package com.example.jpaprac.presentation.controller.comment;
 
 import com.example.jpaprac.application.service.comment.CommentService;
-import com.example.jpaprac.presentation.model.comment.CommentDto;
+import com.example.jpaprac.presentation.dto.comment.CommentDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

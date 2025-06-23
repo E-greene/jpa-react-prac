@@ -4,8 +4,9 @@ import com.example.jpaprac.domain.common.exception.BoardNotFoundException;
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.domain.repository.user.UserRepository;
-import com.example.jpaprac.presentation.model.board.BoardDto;
+import com.example.jpaprac.presentation.dto.board.BoardDto;
 import com.example.jpaprac.domain.repository.board.BoardRepository;
+import com.example.jpaprac.presentation.dto.board.BoardResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,7 +29,7 @@ public class BoardService {
     
     //전체 게시글 조회
     @Transactional(readOnly = true)
-    public List<BoardDto> findAll() {
+    public List<BoardResponse> findAll() {
         return boardRepository.findAll().stream()
                 .map(BoardDto::fromEntity)
                 .collect(Collectors.toList());

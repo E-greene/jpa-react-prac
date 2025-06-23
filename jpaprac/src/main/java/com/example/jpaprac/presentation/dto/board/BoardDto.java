@@ -1,9 +1,7 @@
-package com.example.jpaprac.presentation.model.board;
+package com.example.jpaprac.presentation.dto.board;
 
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.domain.entity.User;
-
-import java.time.LocalDateTime;
 
 public class BoardDto {
     private Long id;
@@ -26,8 +24,6 @@ public class BoardDto {
 
 
     public static BoardDto fromEntity(Board board) {
-        System.out.println("fromEntity======user: " + board.getUser());
-        System.out.println("fromEntity======userName: " + board.getUser().getName());
         return new BoardDto(
                 board.getId(),
                 board.getUser().getId(),
