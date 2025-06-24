@@ -1,11 +1,12 @@
 package com.example.jpaprac.presentation.controller.user;
 
 import com.example.jpaprac.application.service.board.BoardService;
-import com.example.jpaprac.presentation.dto.board.BoardDto;
 import com.example.jpaprac.application.service.user.UserService;
+import com.example.jpaprac.presentation.dto.board.BoardResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @RestController
@@ -22,8 +23,11 @@ public class UserController {
     }
 
     @GetMapping("/{userId}/boards")
-    public List<BoardDto> findByUserId(@PathVariable Long userId) {
-        return boardService.findBoardsByUserId(userId);
+    public List<BoardResponse> findByUserId(@PathVariable Long userId) {
+        return boardService.findBoardsByUserId(userId)
+                .stream()
+                .map(BoardResponse::fromBoardApplicationDto)
+                .collect(Collectors.toList());
     }
 
 }

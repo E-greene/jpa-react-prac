@@ -1,6 +1,7 @@
 package com.example.jpaprac.domain.entity;
 
 import com.example.jpaprac.domain.common.BaseTimeEntity;
+import com.example.jpaprac.presentation.dto.board.CreateBoardCommand;
 
 import javax.persistence.*;
 
@@ -33,7 +34,6 @@ public class Board extends BaseTimeEntity {
         this.user = user;
         this.title = title;
         this.content = content;
-        this.deleteYN = "N";
     }
 
     public Long getId() {
@@ -54,6 +54,15 @@ public class Board extends BaseTimeEntity {
 
     public String getDeleteYN() {
         return deleteYN;
+    }
+
+    public static Board create(User user, CreateBoardCommand createBoardCommand) {
+        Board board = new Board();
+        board.user = user;
+        board.title = createBoardCommand.getTitle();
+        board.content = createBoardCommand.getContent();
+        board.deleteYN = "N";
+        return board;
     }
 
     public void update(String title, String content) {

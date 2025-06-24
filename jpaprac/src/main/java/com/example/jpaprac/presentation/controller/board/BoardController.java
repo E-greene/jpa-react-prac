@@ -48,7 +48,8 @@ public class BoardController {
     @PutMapping("/{boardId}")
     public BoardResponse updateBoard(@PathVariable Long boardId, @RequestBody UpdateBoardRequest updateBoardRequest) {
         UpdateBoardCommand updateBoardCommand = UpdateBoardCommand.fromUpdateBoardRequest(updateBoardRequest);
-        return boardService.updateBoardById(boardId, updateBoardCommand);
+        BoardApplicationDto boardApplicationDto = boardService.updateBoardById(boardId, updateBoardCommand);
+        return BoardResponse.fromBoardApplicationDto(boardApplicationDto);
     }
     
     //게시글 삭제
@@ -56,16 +57,5 @@ public class BoardController {
     public void deleteBoard(@PathVariable Long boardId) {
         boardService.deleteBoardById(boardId);
     }
-
-    //전체게시글 목록 조회
-//    @GetMapping
-//    public List<resopnese> getAllBoards(requetst) {
-//        createBoardCommand crebaordcommna = new Creatboardcommand(requetst);
-//
-//        BoardApplicationDto BoardApplicationDto  = boardService.careateboar(ceratecommand);
-//
-//        BoardResponse boardResponse = new BoardApplicationDto(BoardApplicationDto);
-//        return boardResponse;
-//    }
 
 }
