@@ -7,5 +7,5 @@ import java.util.Optional;
 public interface AuthRepository {
     User findByLoginId(String loginId);
     User findByLoginIdAndLoginPwd(String loginId, String loginPwd);
-    User save(User dto);
+    User save(User user);
 }

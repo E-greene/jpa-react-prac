@@ -1,6 +1,7 @@
 package com.example.jpaprac.domain.entity;
 
 import com.example.jpaprac.domain.common.BaseTimeEntity;
+import com.example.jpaprac.presentation.dto.user.CreateUserCommand;
 
 import javax.persistence.*;
 
@@ -63,5 +64,15 @@ public class User extends BaseTimeEntity {
 
     public String getEmail() {
         return email;
+    }
+
+    public static User create(CreateUserCommand createUserCommand) {
+        User user = new User();
+        user.name = createUserCommand.getName();
+        user.email = createUserCommand.getEmail();
+        user.loginId = createUserCommand.getLoginId();
+        user.loginPwd = createUserCommand.getLoginPwd();
+        user.role = createUserCommand.getRole() != null ? createUserCommand.getRole() : Role.USER;
+        return user;
     }
 }

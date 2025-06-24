@@ -3,20 +3,16 @@ package com.example.jpaprac.presentation.dto.user;
 import com.example.jpaprac.domain.entity.Role;
 import com.example.jpaprac.domain.entity.User;
 
-public class UserDto {
+public class UserApplicationDto {
 
-    private Long id;
-    private String name;
-    private String email;
-    private String loginId;
-    private String loginPwd;
-    private Role role;
+    private final Long id;
+    private final String name;
+    private final String email;
+    private final String loginId;
+    private final String loginPwd;
+    private final Role role;
 
-    public UserDto() {
-
-    }
-
-    public UserDto(Long id, String name, String email, String loginId, String loginPwd, Role role) {
+    public UserApplicationDto(Long id, String name, String email, String loginId, String loginPwd, Role role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -25,8 +21,8 @@ public class UserDto {
         this.role = role;
     }
 
-    public static UserDto fromEntity(User user) {
-        return new UserDto(
+    public static UserApplicationDto fromEntity(User user) {
+        return new UserApplicationDto(
                 user.getId(),
                 user.getName(),
                 user.getEmail(),
@@ -34,11 +30,6 @@ public class UserDto {
                 user.getLoginPwd(),
                 user.getRole()
         );
-    }
-
-    public static User toEntity(UserDto dto) {
-        Role role = dto.getRole() != null ? dto.getRole() : Role.USER;
-        return new User(dto.getId(), dto.getName(), dto.getEmail(),dto.getLoginId(), dto.getLoginPwd(), role);
     }
 
     public Long getId() {

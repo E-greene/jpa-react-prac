@@ -1,7 +1,10 @@
 package com.example.jpaprac.presentation.controller.auth;
 
 import com.example.jpaprac.application.service.auth.AuthService;
-import com.example.jpaprac.presentation.dto.user.UserDto;
+import com.example.jpaprac.presentation.dto.auth.LoginUserCommand;
+import com.example.jpaprac.presentation.dto.auth.LoginUserRequest;
+import com.example.jpaprac.presentation.dto.user.*;
+import org.h2.command.ddl.CreateUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,10 +26,13 @@ public class AuthController {
 
     //회원가입
     @PostMapping("/signUp")
-    public ResponseEntity<?> signUp(@RequestBody UserDto dto) {
+    public ResponseEntity<?> signUp(@RequestBody CreateUserRequest createUserRequest) {
         try {
-            UserDto savedUser = authService.signUp(dto);
-            return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
+            CreateUserCommand createUserCommand = CreateUserCommand.fromCreateBoardRequest(createUserRequest);
+
+            UserApplicationDto signUpUser = authService.signUp(createUserCommand);
+            UserResponse userResponse = UserResponse.fromUserApplicationDto(signUpUser);
+            return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -35,8 +41,11 @@ public class AuthController {
 
     //로그인
     @PostMapping("/login")
-    public ResponseEntity<UserDto> login(@RequestBody UserDto dto) {
-        UserDto loggedInUser =authService.login(dto.getLoginId(), dto.getLoginPwd());
-        return ResponseEntity.ok(loggedInUser);
+    public ResponseEntity<UserResponse> login(@RequestBody LoginUserRequest loginUserRequest) {
+        LoginUserCommand loginUserCommand = LoginUserCommand.fromLoginUserRequest(loginUserRequest);
+
+        UserApplicationDto loggedInUser =authService.login(loginUserCommand);
+        UserResponse userResponse = UserResponse.fromUserApplicationDto(loggedInUser);
+        return ResponseEntity.ok(userResponse);
     }
 }
