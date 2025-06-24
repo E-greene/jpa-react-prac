@@ -12,7 +12,7 @@ public class LoginUserCommand {
     public static LoginUserCommand fromLoginUserRequest(LoginUserRequest loginUserRequest) {
         return new LoginUserCommand(
                 loginUserRequest.getLoginId(),
-                loginUserRequest.getLogidPwd()
+                loginUserRequest.getLoginPwd()
         );
     }
 
