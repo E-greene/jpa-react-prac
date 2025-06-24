@@ -2,6 +2,7 @@ package com.example.jpaprac.infrastructure.persistence.board;
 
 import com.example.jpaprac.domain.entity.Board;
 import com.example.jpaprac.domain.repository.board.BoardRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public class BoardRepositoryImpl implements BoardRepository {
 
     private final BoardJpaRepository boardJpaRepository;
 
+    @Autowired
     public BoardRepositoryImpl(BoardJpaRepository boardJpaRepository) {
         this.boardJpaRepository = boardJpaRepository;
     }

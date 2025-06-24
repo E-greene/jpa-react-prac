@@ -1,8 +1,10 @@
 package com.example.jpaprac.presentation.controller.board;
 
+import com.example.jpaprac.common.ApiResponse;
 import com.example.jpaprac.presentation.dto.board.*;
 import com.example.jpaprac.application.service.board.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,41 +23,83 @@ public class BoardController {
 
     //전체게시글 목록 조회
     @GetMapping
-    public List<BoardResponse> getAllBoards() {
-        return boardService.findAllWithUser()
-                .stream()
-                .map(BoardResponse::fromBoardApplicationDto)
-                .collect(Collectors.toList());
+    public ResponseEntity<ApiResponse<List<BoardResponse>>> getBoards() {
+        try {
+            List<BoardResponse> response = boardService.findAllWithUser()
+                    .stream()
+                    .map(BoardResponse::fromBoardApplicationDto)
+                    .collect(Collectors.toList());
+            return ResponseEntity.ok(ApiResponse.success("게시글 목록 조회 성공!", response));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(ApiResponse.error("게시글 목록 조회 중 오류 발생"));
+        }
     }
     
     //게시글 단건 조회
     @GetMapping("/{boardId}")
-    public BoardResponse getBoardById(@PathVariable Long boardId) {
-        BoardApplicationDto boardApplicationDto = boardService.findByIdWithUser(boardId);
-        return BoardResponse.fromBoardApplicationDto(boardApplicationDto);
+    public ResponseEntity<ApiResponse<BoardResponse>> getBoardById(@PathVariable Long boardId) {
+        try {
+            BoardApplicationDto boardApplicationDto = boardService.findByIdWithUser(boardId);
+            BoardResponse response = BoardResponse.fromBoardApplicationDto(boardApplicationDto);
+            return ResponseEntity.ok(ApiResponse.success("게시글 조회 성공", response));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(ApiResponse.error("게시글 조회 중 오류 발생"));
+        }
+
+
     }
     
     //게시글 생성
     @PostMapping
-    public Long createBoard(@RequestBody CreateBoardRequest createBoardRequest) {
-        CreateBoardCommand createBoardCommand = CreateBoardCommand.fromCreateBoardRequest(createBoardRequest);
-        return boardService.saveBoard(createBoardCommand);
+    public ResponseEntity<ApiResponse<Long>> createBoard(@RequestBody CreateBoardRequest createBoardRequest) {
+        try {
+            CreateBoardCommand createBoardCommand = CreateBoardCommand.fromCreateBoardRequest(createBoardRequest);
+            Long id = boardService.saveBoard(createBoardCommand);
+            return ResponseEntity.ok(ApiResponse.success("게시글 작성 성공", id));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(ApiResponse.error("게시글 작성 중 오류 발생"));
+        }
+
     }
 
 
     
     //게시글 수정
     @PutMapping("/{boardId}")
-    public BoardResponse updateBoard(@PathVariable Long boardId, @RequestBody UpdateBoardRequest updateBoardRequest) {
-        UpdateBoardCommand updateBoardCommand = UpdateBoardCommand.fromUpdateBoardRequest(updateBoardRequest);
-        BoardApplicationDto boardApplicationDto = boardService.updateBoardById(boardId, updateBoardCommand);
-        return BoardResponse.fromBoardApplicationDto(boardApplicationDto);
+    public ResponseEntity<ApiResponse<BoardResponse>> updateBoard(@PathVariable Long boardId, @RequestBody UpdateBoardRequest updateBoardRequest) {
+        try {
+            UpdateBoardCommand updateBoardCommand = UpdateBoardCommand.fromUpdateBoardRequest(updateBoardRequest);
+            BoardApplicationDto boardApplicationDto = boardService.updateBoardById(boardId, updateBoardCommand);
+            BoardResponse response = BoardResponse.fromBoardApplicationDto(boardApplicationDto);
+
+            return ResponseEntity.ok(ApiResponse.success("게시글 수정 성공", response));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(ApiResponse.error("게시글 수정 중 오류 발생"));
+        }
+
     }
     
     //게시글 삭제
     @DeleteMapping("/{boardId}")
-    public void deleteBoard(@PathVariable Long boardId) {
-        boardService.deleteBoardById(boardId);
+    public ResponseEntity<ApiResponse<Void>> deleteBoard(@PathVariable Long boardId) {
+        try {
+            boardService.deleteBoardById(boardId);
+            return ResponseEntity.ok(ApiResponse.success("게시글 삭제 성공"));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(ApiResponse.error("게시글 삭제 중 오류 발생"));
+        }
+
     }
 
 }

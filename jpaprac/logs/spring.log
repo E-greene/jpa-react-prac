@@ -2196,3 +2196,1592 @@ java.lang.IllegalArgumentException: 아이디와 비밀번호를 다시 확인�
     where
         user0_.login_id=?
 2025-06-24 15:22:49.157 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [messi10]
+2025-06-24 15:32:35.827 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Starting JpapracApplication using Java 11.0.26 on DESKTOP-3C210OV with PID 19496 (C:\Users\mcst\Desktop\jpa-react-prac\jpaprac\build\classes\java\main started by mcst in C:\Users\mcst\Desktop\jpa-react-prac\jpaprac)
+2025-06-24 15:32:35.828 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-24 15:32:35.869 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-24 15:32:35.869 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-24 15:32:36.380 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 15:32:36.440 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2025-06-24 15:32:36.995 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-24 15:32:37.001 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-24 15:32:37.003 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-24 15:32:37.003 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-06-24 15:32:37.076 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-24 15:32:37.076 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1207 ms
+2025-06-24 15:32:37.098 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-24 15:32:37.169 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-24 15:32:37.178 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/test'
+2025-06-24 15:32:37.341 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 15:32:37.408 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-06-24 15:32:37.544 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-24 15:32:37.647 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-06-24 15:32:38.136 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 15:32:38.144 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 15:32:38.648 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-24 15:32:38.924 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-06-24 15:32:38.934 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-24 15:32:38.950 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 15:32:38.958 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Started JpapracApplication in 3.515 seconds (JVM running for 3.885)
+2025-06-24 15:32:56.953 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 15:32:56.954 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-24 15:32:56.955 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-24 15:32:57.068 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_,
+        user0_.created_date as created_2_2_,
+        user0_.modified_date as modified3_2_,
+        user0_.email as email4_2_,
+        user0_.login_id as login_id5_2_,
+        user0_.login_pwd as login_pw6_2_,
+        user0_.name as name7_2_,
+        user0_.role as role8_2_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=? 
+        and user0_.login_pwd=?
+2025-06-24 15:32:57.070 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [ozil10]
+2025-06-24 15:32:57.070 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [oizl10]
+2025-06-24 15:32:57.082 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: 아이디와 비밀번호를 다시 확인해주세요] with root cause
+java.lang.IllegalArgumentException: 아이디와 비밀번호를 다시 확인해주세요
+	at com.example.jpaprac.application.service.auth.AuthService.login(AuthService.java:42)
+	at com.example.jpaprac.application.service.auth.AuthService$$FastClassBySpringCGLIB$$d9e4025e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.example.jpaprac.application.service.auth.AuthService$$EnhancerBySpringCGLIB$$853583b0.login(<generated>)
+	at com.example.jpaprac.presentation.controller.auth.AuthController.login(AuthController.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2025-06-24 15:33:21.753 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_,
+        user0_.created_date as created_2_2_,
+        user0_.modified_date as modified3_2_,
+        user0_.email as email4_2_,
+        user0_.login_id as login_id5_2_,
+        user0_.login_pwd as login_pw6_2_,
+        user0_.name as name7_2_,
+        user0_.role as role8_2_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=? 
+        and user0_.login_pwd=?
+2025-06-24 15:33:21.753 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [messi10]
+2025-06-24 15:33:21.754 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [messi10]
+2025-06-24 15:33:22.367 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:22.368 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:22.383 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:22.383 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:29.898 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_,
+        user0_.created_date as created_2_2_,
+        user0_.modified_date as modified3_2_,
+        user0_.email as email4_2_,
+        user0_.login_id as login_id5_2_,
+        user0_.login_pwd as login_pw6_2_,
+        user0_.name as name7_2_,
+        user0_.role as role8_2_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=? 
+        and user0_.login_pwd=?
+2025-06-24 15:33:29.898 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [ozil10]
+2025-06-24 15:33:29.898 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [ozil10]
+2025-06-24 15:33:30.778 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:30.778 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:30.784 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:30.784 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:35.772 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:35.774 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:35.774 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:35.780 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:35.780 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:35.781 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:43.161 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_,
+        user0_.created_date as created_2_2_,
+        user0_.modified_date as modified3_2_,
+        user0_.email as email4_2_,
+        user0_.login_id as login_id5_2_,
+        user0_.login_pwd as login_pw6_2_,
+        user0_.name as name7_2_,
+        user0_.role as role8_2_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=? 
+        and user0_.login_pwd=?
+2025-06-24 15:33:43.161 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [messi10]
+2025-06-24 15:33:43.161 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [messi10]
+2025-06-24 15:33:44.493 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:44.493 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:44.500 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:44.501 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:45.961 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:45.961 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:45.961 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:45.966 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:45.966 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:45.966 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:47.190 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:47.191 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:47.191 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:47.196 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:47.197 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:47.197 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:51.075 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:51.075 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:51.076 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:51.082 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_0_,
+        user0_.created_date as created_2_2_0_,
+        user0_.modified_date as modified3_2_0_,
+        user0_.email as email4_2_0_,
+        user0_.login_id as login_id5_2_0_,
+        user0_.login_pwd as login_pw6_2_0_,
+        user0_.name as name7_2_0_,
+        user0_.role as role8_2_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-06-24 15:33:51.083 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:51.111 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        boards 
+    set
+        created_date=?,
+        modified_date=?,
+        content=?,
+        deleteyn=?,
+        title=?,
+        user_id=? 
+    where
+        id=?
+2025-06-24 15:33:51.113 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-06-19T11:18:56.692853]
+2025-06-24 15:33:51.113 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-06-24T15:33:51.096377400]
+2025-06-24 15:33:51.113 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [테스트내용1!]
+2025-06-24 15:33:51.113 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [N]
+2025-06-24 15:33:51.113 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [테스트제목1!]
+2025-06-24 15:33:51.114 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2025-06-24 15:33:51.114 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2025-06-24 15:33:56.051 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:56.052 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:56.057 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:33:56.057 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:33:57.217 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    left outer join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        user1_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:57.218 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:57.218 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:57.219 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_0_,
+        user0_.created_date as created_2_2_0_,
+        user0_.modified_date as modified3_2_0_,
+        user0_.email as email4_2_0_,
+        user0_.login_id as login_id5_2_0_,
+        user0_.login_pwd as login_pw6_2_0_,
+        user0_.name as name7_2_0_,
+        user0_.role as role8_2_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-06-24 15:33:57.219 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:57.223 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    left outer join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        user1_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:33:57.224 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:33:57.224 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:33:57.225 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_0_,
+        user0_.created_date as created_2_2_0_,
+        user0_.modified_date as modified3_2_0_,
+        user0_.email as email4_2_0_,
+        user0_.login_id as login_id5_2_0_,
+        user0_.login_pwd as login_pw6_2_0_,
+        user0_.name as name7_2_0_,
+        user0_.role as role8_2_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-06-24 15:33:57.226 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:00.551 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:00.552 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:00.552 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:00.557 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:00.557 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:00.557 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:02.619 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:34:02.619 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:34:02.623 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:34:02.624 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:34:52.059 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:52.060 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:52.060 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:52.064 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:52.065 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:52.065 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:55.396 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:55.397 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:55.397 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:55.400 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:55.401 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:55.401 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:58.819 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:34:58.820 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:58.820 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:34:58.821 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_0_,
+        user0_.created_date as created_2_2_0_,
+        user0_.modified_date as modified3_2_0_,
+        user0_.email as email4_2_0_,
+        user0_.login_id as login_id5_2_0_,
+        user0_.login_pwd as login_pw6_2_0_,
+        user0_.name as name7_2_0_,
+        user0_.role as role8_2_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-06-24 15:34:58.821 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-06-24 15:34:58.822 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    update
+        boards 
+    set
+        created_date=?,
+        modified_date=?,
+        content=?,
+        deleteyn=?,
+        title=?,
+        user_id=? 
+    where
+        id=?
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-06-19T11:18:56.692853]
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-06-24T15:34:58.822922]
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [테스트내용1!!]
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [N]
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [테스트제목1!!]
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2025-06-24 15:34:58.823 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2025-06-24 15:34:59.724 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:34:59.725 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:34:59.731 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:34:59.731 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:09.897 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_,
+        user0_.created_date as created_2_2_,
+        user0_.modified_date as modified3_2_,
+        user0_.email as email4_2_,
+        user0_.login_id as login_id5_2_,
+        user0_.login_pwd as login_pw6_2_,
+        user0_.name as name7_2_,
+        user0_.role as role8_2_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=? 
+        and user0_.login_pwd=?
+2025-06-24 15:35:09.898 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [ozil10]
+2025-06-24 15:35:09.898 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [ozil10]
+2025-06-24 15:35:10.975 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:10.976 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:10.980 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:10.981 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:25.073 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_0_,
+        user0_.created_date as created_2_2_0_,
+        user0_.modified_date as modified3_2_0_,
+        user0_.email as email4_2_0_,
+        user0_.login_id as login_id5_2_0_,
+        user0_.login_pwd as login_pw6_2_0_,
+        user0_.name as name7_2_0_,
+        user0_.role as role8_2_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-06-24 15:35:25.073 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2025-06-24 15:35:25.082 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        boards
+        (id, created_date, modified_date, content, deleteyn, title, user_id) 
+    values
+        (default, ?, ?, ?, ?, ?, ?)
+2025-06-24 15:35:25.083 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-06-24T15:35:25.079351500]
+2025-06-24 15:35:25.083 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-06-24T15:35:25.079351500]
+2025-06-24 15:35:25.083 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [테스트내용6]
+2025-06-24 15:35:25.083 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [N]
+2025-06-24 15:35:25.083 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [테스트제목6]
+2025-06-24 15:35:25.083 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [3]
+2025-06-24 15:35:25.936 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:25.937 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:25.941 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:25.942 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:28.359 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:28.360 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:28.360 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:28.364 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:28.364 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:28.364 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:29.280 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:29.281 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:29.281 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:29.285 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:29.285 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:29.285 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:33.706 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:33.707 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:33.707 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:33.708 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_2_0_,
+        user0_.created_date as created_2_2_0_,
+        user0_.modified_date as modified3_2_0_,
+        user0_.email as email4_2_0_,
+        user0_.login_id as login_id5_2_0_,
+        user0_.login_pwd as login_pw6_2_0_,
+        user0_.name as name7_2_0_,
+        user0_.role as role8_2_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-06-24 15:35:33.708 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        boards 
+    set
+        created_date=?,
+        modified_date=?,
+        content=?,
+        deleteyn=?,
+        title=?,
+        user_id=? 
+    where
+        id=?
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-06-24T15:35:25.079352]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-06-24T15:35:33.709873100]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [테스트내용6!]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [N]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [테스트제목6!]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [3]
+2025-06-24 15:35:33.710 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [6]
+2025-06-24 15:35:34.872 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:34.872 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:34.877 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:34.878 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:35.980 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:35.980 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:35.980 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:35.984 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:35.985 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:35.985 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:37.481 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:37.482 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:37.482 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:37.485 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:37.485 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:37.485 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:39.277 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    where
+        board0_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:35:39.277 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2025-06-24 15:35:39.277 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    update
+        boards 
+    set
+        created_date=?,
+        modified_date=?,
+        content=?,
+        deleteyn=?,
+        title=?,
+        user_id=? 
+    where
+        id=?
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-06-24T15:35:25.079352]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-06-24T15:35:39.278829200]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [테스트내용6!]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [Y]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [테스트제목6!]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [3]
+2025-06-24 15:35:39.279 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [6]
+2025-06-24 15:35:54.530 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:54.530 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:35:54.534 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:35:54.535 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:41:52.197 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    left outer join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        user1_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:41:52.198 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2025-06-24 15:41:52.198 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:41:52.201 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_,
+        board0_.created_date as created_2_0_,
+        board0_.modified_date as modified3_0_,
+        board0_.content as content4_0_,
+        board0_.deleteyn as deleteyn5_0_,
+        board0_.title as title6_0_,
+        board0_.user_id as user_id7_0_ 
+    from
+        boards board0_ 
+    left outer join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        user1_.id=? 
+        and board0_.deleteyn=?
+2025-06-24 15:41:52.202 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2025-06-24 15:41:52.202 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [N]
+2025-06-24 15:41:53.513 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:41:53.514 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-06-24 15:41:53.518 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_2_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_2_1_,
+        user1_.modified_date as modified3_2_1_,
+        user1_.email as email4_2_1_,
+        user1_.login_id as login_id5_2_1_,
+        user1_.login_pwd as login_pw6_2_1_,
+        user1_.name as name7_2_1_,
+        user1_.role as role8_2_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-06-24 15:41:53.518 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
