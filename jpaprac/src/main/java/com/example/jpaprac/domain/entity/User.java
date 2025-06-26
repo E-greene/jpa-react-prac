@@ -13,16 +13,16 @@ public class User extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
     @Column
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String loginId;
 
-    @Column
+    @Column(nullable = false)
     private String loginPwd;
 
     @Enumerated(EnumType.STRING) // db에 문자열로 저장하기 위함
@@ -66,13 +66,14 @@ public class User extends BaseTimeEntity {
         return email;
     }
 
-    public static User create(CreateUserCommand createUserCommand) {
+    public static User create(CreateUserCommand createUserCommand, String encodedPwd) {
         User user = new User();
         user.name = createUserCommand.getName();
         user.email = createUserCommand.getEmail();
         user.loginId = createUserCommand.getLoginId();
-        user.loginPwd = createUserCommand.getLoginPwd();
+        user.loginPwd = encodedPwd;
         user.role = createUserCommand.getRole() != null ? createUserCommand.getRole() : Role.USER;
         return user;
     }
+
 }
