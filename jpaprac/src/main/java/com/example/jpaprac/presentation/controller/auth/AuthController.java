@@ -6,6 +6,8 @@ import com.example.jpaprac.presentation.dto.auth.LoginUserCommand;
 import com.example.jpaprac.presentation.dto.auth.LoginUserRequest;
 import com.example.jpaprac.presentation.dto.user.*;
 import org.h2.command.ddl.CreateUser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auths")
 public class AuthController {
+
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     private final AuthService authService;
 
@@ -47,15 +51,21 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<UserResponse>> login(@RequestBody LoginUserRequest loginUserRequest) {
 
+        logger.info("로그인 요청: {}", loginUserRequest);
+
         try {
             LoginUserCommand loginUserCommand = LoginUserCommand.fromLoginUserRequest(loginUserRequest);
             UserApplicationDto loggedInUser = authService.login(loginUserCommand);
             UserResponse userResponse = UserResponse.fromUserApplicationDto(loggedInUser);
 
+            logger.info("로그인 성공 userResponse: {}", userResponse);
+
             return ResponseEntity.ok(ApiResponse.success("로그인 성공", userResponse));
         } catch (IllegalArgumentException e) {
+            logger.warn("로그인 실패: {}", e.getMessage());
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
         } catch (Exception e) {
+            logger.error("로그인 중 오류 발생", e);
             return ResponseEntity.internalServerError().body(ApiResponse.error("로그인 중 오류 발생"));
         }
     }

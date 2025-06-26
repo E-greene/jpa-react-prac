@@ -12,8 +12,8 @@ const EditBoard = () => {
     useEffect(() => {
         axios.get(`http://localhost:8080/boards/${boardId}`)
             .then(res => {
-                setTitle(res.data.title);
-                setContent(res.data.content);
+                setTitle(res.data.data.title);
+                setContent(res.data.data.content);
             })
             .catch(err => {
                 alert("게시글을 불러올 수 없습니다.");

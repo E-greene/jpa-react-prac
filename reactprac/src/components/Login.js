@@ -16,10 +16,10 @@ function Login() {
             loginPwd
         })
         .then((res) => {
-            const userData = res.data; //로그인한 사용자 정보
+            console.log("서버에서 받은 전체 응답:", res.data);
+            const userData = res.data.data; //로그인한 사용자 정보
             console.log("로그인후 userData : " + userData);
             console.log("로그인후 userData : " + userData.id);
-
             //사용자 정보 로컬스토리지에 저장
             localStorage.setItem("user", JSON.stringify(userData));
             localStorage.setItem("userId", userData.id);
@@ -35,7 +35,7 @@ function Login() {
 
     useEffect(() => {
         axios.get('/home')
-        .then(res => setData(res.data))
+        .then(res => setData(res.data.data))
         .catch(err => console.error(err));
     }, []);
     

@@ -13,7 +13,7 @@ const Home = () => {
 
         axios.get(`http://localhost:8080/boards`)
             .then((res) => {
-                setBoards(res.data);
+                setBoards(Array.isArray(res.data.data) ? res.data.data : []);
             })
             .catch((err) => {
                 console.error("실패", err);

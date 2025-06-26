@@ -12,7 +12,7 @@ const BoardDetail = () => {
     useEffect(() => {
         setMyUserId(localStorage.getItem("userId"));
         axios.get(`http://localhost:8080/boards/${boardId}`)
-            .then(res => setBoard(res.data))
+            .then(res => setBoard(res.data.data))
             .catch(err => {
                 alert("게시글을 불러올 수 없습니다.");
                 navigate("/boardList");

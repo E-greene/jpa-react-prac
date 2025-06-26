@@ -12,7 +12,7 @@ const BoardListByUser = () => {
         if(userId) {
             axios.get(`http://localhost:8080/users/${userId}/boards`)
                 .then((res) => {
-                    setBoards(res.data);
+                    setBoards(res.data.data);
                 })
                 .catch((err) => {
                     console.error("실패", err);

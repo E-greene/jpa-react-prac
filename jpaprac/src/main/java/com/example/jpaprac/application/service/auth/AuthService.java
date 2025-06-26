@@ -4,12 +4,16 @@ import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.domain.repository.auth.AuthRepository;
 import com.example.jpaprac.presentation.dto.auth.LoginUserCommand;
 import com.example.jpaprac.presentation.dto.user.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AuthService {
+
+    private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
 
     private final AuthRepository authRepository;
 
@@ -37,11 +41,15 @@ public class AuthService {
     @Transactional
     public UserApplicationDto login(LoginUserCommand loginUserCommand) {
 
+        logger.info("서비스 login 호출: {}", loginUserCommand);
+
         User user = authRepository.findByLoginIdAndLoginPwd(loginUserCommand.getLoginId(), loginUserCommand.getLoginPwd());
         if (user == null) {
+            logger.warn("로그인 실패: 아이디/비밀번호 불일치 loginId={}", loginUserCommand.getLoginId());
             throw new IllegalArgumentException("아이디와 비밀번호를 다시 확인해주세요");
         }
 
+        logger.info("로그인 성공, User: {}", user);
         return UserApplicationDto.fromEntity(user);
     }
 }
