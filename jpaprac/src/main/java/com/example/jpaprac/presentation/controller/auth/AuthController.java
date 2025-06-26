@@ -1,6 +1,7 @@
 package com.example.jpaprac.presentation.controller.auth;
 
 import com.example.jpaprac.application.service.auth.AuthService;
+import com.example.jpaprac.common.ApiResponse;
 import com.example.jpaprac.presentation.dto.auth.LoginUserCommand;
 import com.example.jpaprac.presentation.dto.auth.LoginUserRequest;
 import com.example.jpaprac.presentation.dto.user.*;
@@ -26,26 +27,36 @@ public class AuthController {
 
     //회원가입
     @PostMapping("/signUp")
-    public ResponseEntity<?> signUp(@RequestBody CreateUserRequest createUserRequest) {
+    public ResponseEntity<ApiResponse<UserResponse>> signUp(@RequestBody CreateUserRequest createUserRequest) {
         try {
             CreateUserCommand createUserCommand = CreateUserCommand.fromCreateBoardRequest(createUserRequest);
 
             UserApplicationDto signUpUser = authService.signUp(createUserCommand);
             UserResponse userResponse = UserResponse.fromUserApplicationDto(signUpUser);
-            return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
+            return ResponseEntity.ok(ApiResponse.success("회원가입 성공", userResponse));
         } catch (IllegalArgumentException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body(ApiResponse.error("회원가입 중 오류 발생"));
         }
 
     }
 
     //로그인
     @PostMapping("/login")
-    public ResponseEntity<UserResponse> login(@RequestBody LoginUserRequest loginUserRequest) {
-        LoginUserCommand loginUserCommand = LoginUserCommand.fromLoginUserRequest(loginUserRequest);
+    public ResponseEntity<ApiResponse<UserResponse>> login(@RequestBody LoginUserRequest loginUserRequest) {
 
-        UserApplicationDto loggedInUser =authService.login(loginUserCommand);
-        UserResponse userResponse = UserResponse.fromUserApplicationDto(loggedInUser);
-        return ResponseEntity.ok(userResponse);
+        try {
+            LoginUserCommand loginUserCommand = LoginUserCommand.fromLoginUserRequest(loginUserRequest);
+            UserApplicationDto loggedInUser = authService.login(loginUserCommand);
+            UserResponse userResponse = UserResponse.fromUserApplicationDto(loggedInUser);
+
+            return ResponseEntity.ok(ApiResponse.success("로그인 성공", userResponse));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().body(ApiResponse.error("로그인 중 오류 발생"));
+        }
     }
 }

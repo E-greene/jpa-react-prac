@@ -2,8 +2,10 @@ package com.example.jpaprac.presentation.controller.user;
 
 import com.example.jpaprac.application.service.board.BoardService;
 import com.example.jpaprac.application.service.user.UserService;
+import com.example.jpaprac.common.ApiResponse;
 import com.example.jpaprac.presentation.dto.board.BoardResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,11 +27,19 @@ public class UserController {
     }
 
     @GetMapping("/{userId}/boards")
-    public List<BoardResponse> findByUserId(@PathVariable Long userId) {
-        return boardService.findBoardsByUserId(userId)
-                .stream()
-                .map(BoardResponse::fromBoardApplicationDto)
-                .collect(Collectors.toList());
+    public ResponseEntity<ApiResponse<List<BoardResponse>>> findByUserId(@PathVariable Long userId) {
+
+        try {
+            List<BoardResponse> result = boardService.findBoardsByUserId(userId)
+                    .stream()
+                    .map(BoardResponse::fromBoardApplicationDto)
+                    .collect(Collectors.toList());
+            return ResponseEntity.ok(ApiResponse.success("사용자 게시글 조회 성공", result));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().body(ApiResponse.error("사용자 게시글 조회 중 오류 발생"));
+        }
     }
+
+
 
 }
