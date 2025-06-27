@@ -9,9 +9,9 @@ const CreateBoard = () => {
     const [content, setContent] = useState('');
     const userId = localStorage.getItem("userId");
     console.log("=================="+userId);
-    if (!userId) {
-        alert("로그인이 필요합니다.");
-        navigate('/home');
+
+    if (!localStorage.getItem("userId")) {
+        navigate('/login');
     }
 
     const handleSubmit = async (e) => {
@@ -31,6 +31,9 @@ const CreateBoard = () => {
                 userId: Number(userId),
                 title,
                 content
+            },
+            {
+                withCredentials: true
             });
             
             alert("게시글이 성공적으로 등록되었습니다.");
@@ -39,8 +42,14 @@ const CreateBoard = () => {
 
             
         } catch(error) {
-            console.error("게시글 등록 실패 : ", error);
-            alert("게시글 등록 중 오류가 발생했습니다.");
+            // 백엔드에서 401, 403이 온 경우 로그인 페이지로 이동
+            if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+                alert("로그인이 필요합니다");
+                navigate("/login");
+            } else {
+                console.error("게시글 등록 실패 : ", error);
+                alert("게시글 등록 중 오류가 발생했습니다.");
+            }       
         }
     };
 

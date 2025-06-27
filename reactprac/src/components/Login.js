@@ -11,19 +11,15 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault();
         //로그인요청 보내기
+        console.log("로그인시 보낼 값:", loginId, loginPwd);
         axios.post("http://localhost:8080/auths/login", {
             loginId,
             loginPwd
+        },
+        {
+            withCredentials: true
         })
         .then((res) => {
-            console.log("서버에서 받은 전체 응답:", res.data);
-            const userData = res.data.data; //로그인한 사용자 정보
-            console.log("로그인후 userData : " + userData);
-            console.log("로그인후 userData : " + userData.id);
-            //사용자 정보 로컬스토리지에 저장
-            localStorage.setItem("user", JSON.stringify(userData));
-            localStorage.setItem("userId", userData.id);
-
             alert('로그인하셨습니다');
             navigate("/home");
         })

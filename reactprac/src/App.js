@@ -13,12 +13,13 @@ import Header from './components/common/Header';
 // Header 조건부 렌더링을 위해 LayoutWithHeader 컴포넌트 추가
 function LayoutWithHeader() {
   const location = useLocation();
-  const hideHeader = ["/login", "/signin"].includes(location.pathname);
+  const hideHeader = ["/","/login", "/signin"].includes(location.pathname);
 
   return (
     <>
       {!hideHeader && <Header />}
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/boardListByUser" element={<BoardListByUser />} />

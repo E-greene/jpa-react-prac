@@ -10,12 +10,23 @@ const BoardDetail = () => {
     const [myUserId, setMyUserId] = useState(null);
 
     useEffect(() => {
+
+        // if (!localStorage.getItem("userId")) {
+        //     navigate('/login');
+        // }
+
         setMyUserId(localStorage.getItem("userId"));
-        axios.get(`http://localhost:8080/boards/${boardId}`)
+        axios.get(`http://localhost:8080/boards/${boardId}`, { withCredentials: true })
             .then(res => setBoard(res.data.data))
             .catch(err => {
-                alert("게시글을 불러올 수 없습니다.");
-                navigate("/boardList");
+                // 백엔드에서 401, 403이 온 경우 로그인 페이지로 이동
+                if (err.response && (err.response.status === 401 || err.response.status === 403)) {
+                    alert("로그인이 필요합니다");
+                    navigate("/login");
+                } else {
+                    alert("게시글을 불러올 수 없습니다.");
+                    navigate("/boardList");
+                }         
             });
     }, [boardId, navigate]);
 

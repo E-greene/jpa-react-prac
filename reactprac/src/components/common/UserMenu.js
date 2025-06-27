@@ -11,7 +11,7 @@ const UserMenu = () => {
 
     return (
         <>
-            <span>{user ? user.name : "Guest"}</span>
+            <span>{user.name}</span>
         <button onClick={handleLogout}>로그아웃</button>
         </>
     );

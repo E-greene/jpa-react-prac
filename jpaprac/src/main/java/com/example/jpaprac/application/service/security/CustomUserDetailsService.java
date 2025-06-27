@@ -1,4 +1,4 @@
-package com.example.jpaprac.infrastructure.persistence.security;
+package com.example.jpaprac.application.service.security;
 
 import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.domain.repository.auth.AuthRepository;

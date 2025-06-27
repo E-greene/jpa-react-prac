@@ -45,7 +45,7 @@ public class AuthService {
 
     //로그인
     @Transactional
-    public UserApplicationDto login(LoginUserCommand loginUserCommand) {
+    public User login(LoginUserCommand loginUserCommand) {
 
         logger.info("서비스 login 호출: {}", loginUserCommand);
 
@@ -63,6 +63,6 @@ public class AuthService {
         }
 
         logger.info("로그인 성공, User: {}", user);
-        return UserApplicationDto.fromEntity(user);
+        return user;
     }
 }

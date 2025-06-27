@@ -2,6 +2,7 @@ package com.example.jpaprac.presentation.controller.auth;
 
 import com.example.jpaprac.application.service.auth.AuthService;
 import com.example.jpaprac.common.ApiResponse;
+import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.presentation.dto.auth.LoginUserCommand;
 import com.example.jpaprac.presentation.dto.auth.LoginUserRequest;
 import com.example.jpaprac.presentation.dto.user.*;
@@ -11,10 +12,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("/auths")
@@ -49,13 +58,35 @@ public class AuthController {
 
     //로그인
     @PostMapping("/login")
-    public ResponseEntity<ApiResponse<UserResponse>> login(@RequestBody LoginUserRequest loginUserRequest) {
+    public ResponseEntity<ApiResponse<UserResponse>> login(@RequestBody LoginUserRequest loginUserRequest,
+                                                           HttpServletRequest request) {
 
         logger.info("로그인 요청: {}", loginUserRequest);
+        logger.debug("loginUserRequest: loginId={}, loginPwd={}", loginUserRequest.getLoginId(), loginUserRequest.getLoginPwd());
 
         try {
             LoginUserCommand loginUserCommand = LoginUserCommand.fromLoginUserRequest(loginUserRequest);
-            UserApplicationDto loggedInUser = authService.login(loginUserCommand);
+            User user = authService.login(loginUserCommand);
+
+            //인증 객체 생성
+            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
+                    user.getLoginId(),
+                    null,
+                    List.of(new SimpleGrantedAuthority(user.getRole().getRoleName()))
+            );
+
+            //SecurityContext에 저장
+            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+
+            //4. 세션에 SecurityContext 저장(JSSENIONID 쿠키 발급를 위함)
+            HttpSession session = request.getSession(true);
+            session.setAttribute(
+                    HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
+                    SecurityContextHolder.getContext()
+            );
+
+            UserApplicationDto loggedInUser = UserApplicationDto.fromEntity(user);
+
             UserResponse userResponse = UserResponse.fromUserApplicationDto(loggedInUser);
 
             logger.info("로그인 성공 userResponse: {}", userResponse);
