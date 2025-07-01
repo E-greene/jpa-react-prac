@@ -27,6 +27,7 @@ function LayoutWithHeader() {
         <Route path="/board/:boardId" element={<BoardDetail />} />
         <Route path="/editBoard/:boardId" element={<EditBoard />} />
         <Route path="/home" element={<Home />} />
+        <Route path="*" element={<Login />} />
       </Routes>
     </>
   );
