@@ -17,6 +17,6 @@ public class BidWebSocketController {
 
     @MessageMapping("/bid")
     public void handleBid(BidMessage message) {
-        publisher.publish(message)
+        publisher.publish(message);
     }
 }
