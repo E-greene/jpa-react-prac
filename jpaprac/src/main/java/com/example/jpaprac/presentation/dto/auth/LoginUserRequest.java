@@ -5,6 +5,10 @@ public class LoginUserRequest {
     private String loginId;
     private String loginPwd;
 
+    public LoginUserRequest() {
+
+    }
+
     public LoginUserRequest(String loginId, String loginPwd) {
         this.loginId = loginId;
         this.loginPwd = loginPwd;

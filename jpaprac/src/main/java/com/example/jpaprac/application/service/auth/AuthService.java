@@ -48,6 +48,7 @@ public class AuthService {
     public User login(LoginUserCommand loginUserCommand) {
 
         logger.info("서비스 login 호출: {}", loginUserCommand);
+        logger.info("서비스 login 호출: loginId={}, loginPwd={}", loginUserCommand.getLoginId(), loginUserCommand.getLoginPwd());
 
         //loginId로 User찾기
         User user = authRepository.findByLoginId(loginUserCommand.getLoginId());
