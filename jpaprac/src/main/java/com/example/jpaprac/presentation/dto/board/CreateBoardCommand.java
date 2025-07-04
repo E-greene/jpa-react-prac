@@ -12,12 +12,8 @@ public class CreateBoardCommand {
         this.content = content;
     }
 
-    public static CreateBoardCommand fromCreateBoardRequest(CreateBoardRequest createBoardRequest) {
-        return new CreateBoardCommand(
-                createBoardRequest.getUserId(),
-                createBoardRequest.getTitle(),
-                createBoardRequest.getContent()
-        );
+    public static CreateBoardCommand of(Long userId, String title, String content) {
+        return new CreateBoardCommand(userId, title, content);
     }
 
     public Long getUserId() {

@@ -4,8 +4,10 @@ import com.example.jpaprac.application.service.board.BoardService;
 import com.example.jpaprac.application.service.user.UserService;
 import com.example.jpaprac.common.ApiResponse;
 import com.example.jpaprac.presentation.dto.board.BoardResponse;
+import com.example.jpaprac.presentation.dto.user.UserAuthDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,10 +28,12 @@ public class UserController {
         this.boardService = boardService;
     }
 
-    @GetMapping("/{userId}/boards")
-    public ResponseEntity<ApiResponse<List<BoardResponse>>> findByUserId(@PathVariable Long userId) {
+    @GetMapping("/my/boards")
+    public ResponseEntity<ApiResponse<List<BoardResponse>>> findByUserId(@AuthenticationPrincipal UserAuthDto userAuthDto) {
 
         try {
+            Long userId = userAuthDto.getId();
+
             List<BoardResponse> result = boardService.findBoardsByUserId(userId)
                     .stream()
                     .map(BoardResponse::fromBoardApplicationDto)

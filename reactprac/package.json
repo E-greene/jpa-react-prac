@@ -40,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/sockjs-client": "^1.5.4",
+    "@types/stompjs": "^2.3.9"
   }
 }

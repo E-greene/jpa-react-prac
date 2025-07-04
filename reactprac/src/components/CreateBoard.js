@@ -7,12 +7,6 @@ const CreateBoard = () => {
     const navigate = useNavigate();
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const userId = localStorage.getItem("userId");
-    console.log("=================="+userId);
-
-    if (!localStorage.getItem("userId")) {
-        navigate('/login');
-    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +22,6 @@ const CreateBoard = () => {
 
         try {
             const response = await axios.post("http://localhost:8080/boards", {
-                userId: Number(userId),
                 title,
                 content
             },

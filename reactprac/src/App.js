@@ -10,6 +10,7 @@ import EditBoard from './components/EditBoard';
 import Home from './components/Home';
 import Header from './components/common/Header';
 import BiddingRoom from './components/BiddingRoom';
+import Chat from './components/ChatComponent';
 
 // Header 조건부 렌더링을 위해 LayoutWithHeader 컴포넌트 추가
 function LayoutWithHeader() {
@@ -29,6 +30,7 @@ function LayoutWithHeader() {
         <Route path="/editBoard/:boardId" element={<EditBoard />} />
         <Route path="/home" element={<Home />} />
         <Route path="/bidding" element={<BiddingRoom />} />
+        <Route path="/chatting" element={<Chat />} />
         <Route path="*" element={<Login />} />
       </Routes>
     </>

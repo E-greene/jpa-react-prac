@@ -23,6 +23,11 @@ public class SecurityConfig {
                 .formLogin().disable()
                 .logout()
                     .logoutUrl("/auths/logout")
+                    .logoutSuccessHandler(((request, response, authentication) -> {
+                        response.setStatus(200); // 200 OK로 응답
+                    }))
+                    .invalidateHttpSession(true) // 세션 무효화
+                    .deleteCookies("JESSIONID") //세션 쿠키 제거
                     .permitAll();
         return http.build();
     }

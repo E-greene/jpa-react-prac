@@ -8,21 +8,19 @@ const BoardListByUser = () => {
     
     useEffect(() => {
         
-        if(userId) {
-            axios.get(`http://localhost:8080/users/${userId}/boards`, { withCredentials: true })
-                .then((res) => {
-                    setBoards(res.data.data);
-                })
-                .catch((err) => {
-                    // 백엔드에서 401, 403이 온 경우 로그인 페이지로 이동
-                    if (err.response && (err.response.status === 401 || err.response.status === 403)) {
-                        alert("로그인이 필요합니다");
-                        navigate("/login");
-                    } else {
-                        console.error("실패", err);
-                    }                 
-                });
-        }
+        axios.get(`http://localhost:8080/users/my/boards`, { withCredentials: true })
+            .then((res) => {
+                setBoards(res.data.data);
+            })
+            .catch((err) => {
+                // 백엔드에서 401, 403이 온 경우 로그인 페이지로 이동
+                if (err.response && (err.response.status === 401 || err.response.status === 403)) {
+                    alert("로그인이 필요합니다");
+                    navigate("/login");
+                } else {
+                    console.error("실패", err);
+                }                 
+            });
     }, []);
 
     const handleCreatePost = () => {

@@ -3,8 +3,10 @@ package com.example.jpaprac.presentation.controller.board;
 import com.example.jpaprac.common.ApiResponse;
 import com.example.jpaprac.presentation.dto.board.*;
 import com.example.jpaprac.application.service.board.BoardService;
+import com.example.jpaprac.presentation.dto.user.UserAuthDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,9 +57,11 @@ public class BoardController {
     
     //게시글 생성
     @PostMapping
-    public ResponseEntity<ApiResponse<Long>> createBoard(@RequestBody CreateBoardRequest createBoardRequest) {
+    public ResponseEntity<ApiResponse<Long>> createBoard(@RequestBody CreateBoardRequest createBoardRequest, @AuthenticationPrincipal UserAuthDto userAuthDto) {
         try {
-            CreateBoardCommand createBoardCommand = CreateBoardCommand.fromCreateBoardRequest(createBoardRequest);
+
+            CreateBoardCommand createBoardCommand = CreateBoardCommand.of(userAuthDto.getId(), createBoardRequest.getTitle(), createBoardRequest.getContent());
+
             Long id = boardService.saveBoard(createBoardCommand);
             return ResponseEntity.ok(ApiResponse.success("게시글 작성 성공", id));
         } catch (Exception e) {
