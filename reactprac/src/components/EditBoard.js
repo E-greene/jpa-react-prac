@@ -2,18 +2,16 @@ import React, {useEffect, useState} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import '../CreateBoard.css';
+import useAuthCheck from './hook/useAuthCheck';
 
 const EditBoard = () => {
+    useAuthCheck();
     const {boardId} = useParams();
     const navigate = useNavigate();
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
     useEffect(() => {
-
-        if (!localStorage.getItem("userId")) {
-            navigate('/login');
-        }
 
         axios.get(`http://localhost:8080/boards/${boardId}`, { withCredentials: true })
             .then(res => {
@@ -48,6 +46,8 @@ const EditBoard = () => {
             await axios.put(`http://localhost:8080/boards/${boardId}`, {
                 title,
                 content
+            },{
+                withCredentials: true
             });
             alert('게시글이 수정되었습니다');
             navigate("/home");
@@ -60,7 +60,9 @@ const EditBoard = () => {
     const handleDelete = async () => {
         if(window.confirm("정말로 삭제하시겠습니까?")) {
             try {
-                await axios.delete(`http://localhost:8080/boards/${boardId}`);
+                await axios.delete(`http://localhost:8080/boards/${boardId}`, {
+                    withCredentials: true
+                });
                 alert("게시글이 삭제되었습니다.");
                 navigate("/home");
             } catch (error) {

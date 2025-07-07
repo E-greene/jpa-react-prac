@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import '../CreateBoard.css';
+import useAuthCheck from './hook/useAuthCheck';
 
 const CreateBoard = () => {
+    useAuthCheck();
     const navigate = useNavigate();
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');

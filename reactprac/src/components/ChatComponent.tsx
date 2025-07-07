@@ -3,11 +3,14 @@ import React, { useEffect, useRef } from 'react';
 import SockJS from 'sockjs-client';
 import { Stomp } from '@stomp/stompjs';
 import axios from 'axios';
+import useAuthCheck from './hook/useAuthCheck';
 
 //let stompClient: Client | null = null;
 let stompClient: any = null; // 타입 충돌 방지
 
 export default function ChatComponent() {
+  const user = useAuthCheck();
+  console.log(user);
   const messageInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -31,7 +34,7 @@ export default function ChatComponent() {
   }, []);
 
   const sendMessage = () => {
-    if (stompClient && messageInput.current?.value) {
+    if (stompClient && messageInput.current?.value && user) {
       const message = {
         //sender: 'ReactUser',
         content: messageInput.current.value,

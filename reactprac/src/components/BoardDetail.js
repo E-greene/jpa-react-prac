@@ -2,20 +2,17 @@ import React, {useEffect, useState} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import '../CreateBoard.css';
+import useAuthCheck from './hook/useAuthCheck';
 
 const BoardDetail = () => {
+    const user = useAuthCheck();
     const {boardId} = useParams();
     const navigate = useNavigate();
     const [board, setBoard] = useState(null);
-    const [myUserId, setMyUserId] = useState(null);
 
     useEffect(() => {
+        if(!user) return;
 
-        // if (!localStorage.getItem("userId")) {
-        //     navigate('/login');
-        // }
-
-        setMyUserId(localStorage.getItem("userId"));
         axios.get(`http://localhost:8080/boards/${boardId}`, { withCredentials: true })
             .then(res => setBoard(res.data.data))
             .catch(err => {
@@ -28,11 +25,11 @@ const BoardDetail = () => {
                     navigate("/boardList");
                 }         
             });
-    }, [boardId, navigate]);
+    }, [boardId, navigate, user]);
 
-    if(!board) return null;
+    if(!user || !board) return null;
 
-    const isMine = String(myUserId) === String(board.userId);
+    const isMine = String(user.id) === String(board.userId);
 
     return (
         <div className="create-board-container">

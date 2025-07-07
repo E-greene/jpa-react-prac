@@ -1,8 +1,10 @@
 import React, {useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import useAuthCheck from './hook/useAuthCheck';
 
 const BoardListByUser = () => {
+    useAuthCheck();
     const navigate = useNavigate();
     const [boards, setBoards] = useState([]);
     

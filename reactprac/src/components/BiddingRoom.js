@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import SockJS from 'sockjs-client';
 import { Client } from '@stomp/stompjs';
+import useAuthCheck from './hook/useAuthCheck';
 
 const socketUrl = 'http://localhost:8080/ws';
 const topic = '/topic/bid/room1';
 const sendEndpoint = 'http://localhost:8080/api/bid';
 
 export default function BiddingRoom() {
+  useAuthCheck();
+
   const [bids, setBids] = useState([]);
   const [price, setPrice] = useState('');
   const client = useRef<Client | null>(null);

@@ -108,8 +108,7 @@ public class AuthController {
     @GetMapping("/me")
     public ResponseEntity<ApiResponse<UserResponse>> getMyInfo(@AuthenticationPrincipal UserAuthDto userAuthDto) {
         try {
-            User user = userService.findById(userAuthDto.getId());
-            UserApplicationDto dto = UserApplicationDto.fromEntity(user);
+            UserApplicationDto dto = userService.findById(userAuthDto.getId());
             UserResponse userResponse = UserResponse.fromUserApplicationDto(dto);
 
             return ResponseEntity.ok(ApiResponse.success("유저 정보 조회 성공", userResponse));
