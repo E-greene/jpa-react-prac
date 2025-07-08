@@ -20,6 +20,8 @@ const UserMenu = () => {
     
     };
 
+    if (!user) return <span>로딩 중...</span>;
+
     return (
             <>
             <span>{user.name}</span>
