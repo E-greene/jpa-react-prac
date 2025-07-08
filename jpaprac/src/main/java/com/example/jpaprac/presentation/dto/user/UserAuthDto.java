@@ -2,7 +2,9 @@ package com.example.jpaprac.presentation.dto.user;
 
 import com.example.jpaprac.domain.entity.Role;
 
-public class UserAuthDto {
+import java.security.Principal;
+
+public class UserAuthDto implements Principal {
 
     private final Long id;
     private final String name;

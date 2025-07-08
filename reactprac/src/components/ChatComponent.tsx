@@ -5,12 +5,12 @@ import { Stomp } from '@stomp/stompjs';
 import axios from 'axios';
 import useAuthCheck from './hook/useAuthCheck';
 
-//let stompClient: Client | null = null;
+
 let stompClient: any = null; // 타입 충돌 방지
 
 export default function ChatComponent() {
   const user = useAuthCheck();
-  console.log(user);
+  
   const messageInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -36,13 +36,15 @@ export default function ChatComponent() {
   const sendMessage = () => {
     if (stompClient && messageInput.current?.value && user) {
       const message = {
-        //sender: 'ReactUser',
+        //sender: user.name,
         content: messageInput.current.value,
       };
       stompClient.send('/app/chat.sendMessage', {}, JSON.stringify(message));
       messageInput.current.value = '';
     }
   };
+
+  if (!user) return <div>Loading user...</div>; // 유저 정보 없으면 렌더링 X
 
   return (
     <div>

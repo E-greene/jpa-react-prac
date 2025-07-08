@@ -12,11 +12,11 @@ import java.security.Principal;
 
 @Controller
 public class ChatController {
-    
+
     @MessageMapping("/chat.sendMessage") // /app/chat.sendMessage로 온 메시지 처리
     @SendTo("/topic/public") // 결과를 /topic/public으로 브로드캐스트
-    public ChatMessage sendMessage(ChatMessage message, @AuthenticationPrincipal UserAuthDto userAuthDto) {
-        String loginId = userAuthDto.getLoginId();
-        return new ChatMessage(loginId, message.getContent());
+    public ChatMessage sendMessage(ChatMessage message, Principal principal) {
+        String userName = principal != null ? principal.getName() : "anonymous";
+        return new ChatMessage(userName, message.getContent());
     }
 }

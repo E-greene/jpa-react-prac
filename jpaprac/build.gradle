@@ -20,6 +20,7 @@ repositories {
 dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-security' //스프링 시큐리티
+	implementation 'org.springframework.security:spring-security-messaging'//웹소켓에서 인증 연동
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'

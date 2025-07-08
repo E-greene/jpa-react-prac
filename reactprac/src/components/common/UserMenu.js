@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
+import useAuthCheck from '../hook/useAuthCheck';
 
 const UserMenu = () => {
+    const user = useAuthCheck();
     
     const handleLogout = async () => {
         
@@ -20,6 +22,7 @@ const UserMenu = () => {
 
     return (
             <>
+            <span>{user.name}</span>
             <button onClick={handleLogout}>로그아웃</button>
         </>
     );
