@@ -1,5 +1,7 @@
 package com.example.jpaprac.presentation.dto.chat;
 
+import com.example.jpaprac.presentation.dto.user.UserAuthDto;
+
 public class ChatMessageDto {
 
     private String roomId;
@@ -15,6 +17,15 @@ public class ChatMessageDto {
         this.senderId = senderId;
         this.senderName = senderName;
         this.message = message;
+    }
+
+    public static ChatMessageDto of(String roomId, Long userId, String userName, String message) {
+        return new ChatMessageDto(
+                roomId,
+                userId,
+                userName,
+                message
+        );
     }
 
     public String getRoomId() {
