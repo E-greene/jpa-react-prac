@@ -17998,3 +17998,1609 @@ Caused by: java.lang.IllegalArgumentException: argument type mismatch
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
 	... 10 common frames omitted
+2025-07-09 13:54:12.069 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Starting JpapracApplication using Java 11.0.26 on DESKTOP-3C210OV with PID 22348 (C:\Users\mcst\Desktop\jpa-react-prac\jpaprac\build\classes\java\main started by mcst in C:\Users\mcst\Desktop\jpa-react-prac\jpaprac)
+2025-07-09 13:54:12.070 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-09 13:54:12.113 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-09 13:54:12.114 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-09 13:54:12.719 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-09 13:54:12.790 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2025-07-09 13:54:13.400 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-09 13:54:13.407 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-09 13:54:13.409 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-09 13:54:13.409 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-09 13:54:13.503 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-09 13:54:13.503 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1389 ms
+2025-07-09 13:54:13.530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-09 13:54:13.599 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-09 13:54:13.607 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/test'
+2025-07-09 13:54:13.782 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-09 13:54:13.835 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-07-09 13:54:13.987 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-09 13:54:14.102 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-07-09 13:54:14.648 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-09 13:54:14.656 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-09 13:54:15.281 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-09 13:54:15.495 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57e2daa7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8bbac70, org.springframework.security.web.context.SecurityContextPersistenceFilter@6950a520, org.springframework.security.web.header.HeaderWriterFilter@39b92c33, org.springframework.web.filter.CorsFilter@2946d0ed, org.springframework.security.web.authentication.logout.LogoutFilter@6b747991, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b2cc3da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@975bff8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c655da2, org.springframework.security.web.session.SessionManagementFilter@1a8938e5, org.springframework.security.web.access.ExceptionTranslationFilter@1e15bc31, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fabbb0b]
+2025-07-09 13:54:15.732 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-07-09 13:54:15.741 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-09 13:54:15.759 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-09 13:54:15.761 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-07-09 13:54:15.762 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@746d7137]]
+2025-07-09 13:54:15.762 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-07-09 13:54:15.770 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Started JpapracApplication in 4.097 seconds (JVM running for 4.521)
+2025-07-09 13:54:41.210 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-09 13:54:41.210 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-09 13:54:41.211 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-09 13:54:46.835 [http-nio-8080-exec-5] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@cd15184
+2025-07-09 13:54:46.845 [http-nio-8080-exec-5] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@ca2e710
+2025-07-09 13:54:46.845 [http-nio-8080-exec-5] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=modric10, loginPwd=
+2025-07-09 13:54:46.869 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-09 13:54:46.871 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [modric10]
+2025-07-09 13:54:46.945 [http-nio-8080-exec-5] WARN  c.e.j.a.service.auth.AuthService - 로그인 실패: 비밀번호 불일치 loginId=modric10
+2025-07-09 13:54:46.948 [http-nio-8080-exec-5] WARN  c.e.j.p.c.auth.AuthController - 로그인 실패: 아이디와 비밀번호를 다시 확인해주세요
+2025-07-09 13:54:50.391 [http-nio-8080-exec-4] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@651401fd
+2025-07-09 13:54:50.392 [http-nio-8080-exec-4] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@6bd3f32f
+2025-07-09 13:54:50.393 [http-nio-8080-exec-4] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=modric10, loginPwd=modric10
+2025-07-09 13:54:50.394 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-09 13:54:50.394 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [modric10]
+2025-07-09 13:54:50.452 [http-nio-8080-exec-4] INFO  c.e.j.a.service.auth.AuthService - 로그인 성공, User: com.example.jpaprac.domain.entity.User@6f301e5d
+2025-07-09 13:54:50.518 [http-nio-8080-exec-4] INFO  c.e.j.p.c.auth.AuthController - 로그인 성공 userResponse: com.example.jpaprac.presentation.dto.user.UserResponse@6c84e592
+2025-07-09 13:54:51.985 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:54:51.986 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:54:51.994 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:54:51.996 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:54:52.005 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:54:52.005 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:54:52.008 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:54:52.008 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:54:52.018 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:54:52.019 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:54:52.027 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:54:52.028 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:01.984 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:01.985 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:01.989 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:01.989 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:01.996 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:01.996 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:02.002 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:02.002 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:05.218 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-09 13:55:05.219 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [1]
+2025-07-09 13:55:10.960 [clientInboundChannel-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        chats
+        (id, created_date, modified_date, message, room_id, sender_id, sender_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?)
+2025-07-09 13:55:10.961 [clientInboundChannel-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-07-09T13:55:10.945934]
+2025-07-09 13:55:10.962 [clientInboundChannel-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-07-09T13:55:10.945934]
+2025-07-09 13:55:10.962 [clientInboundChannel-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [helloworld]
+2025-07-09 13:55:10.962 [clientInboundChannel-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [1]
+2025-07-09 13:55:10.962 [clientInboundChannel-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [35]
+2025-07-09 13:55:10.962 [clientInboundChannel-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [modric]
+2025-07-09 13:55:15.530 [MessageBroker-4] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 2, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 3]
+2025-07-09 13:55:21.341 [clientInboundChannel-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        chats
+        (id, created_date, modified_date, message, room_id, sender_id, sender_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?)
+2025-07-09 13:55:21.342 [clientInboundChannel-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-07-09T13:55:21.341288500]
+2025-07-09 13:55:21.342 [clientInboundChannel-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-07-09T13:55:21.341288500]
+2025-07-09 13:55:21.342 [clientInboundChannel-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [두번째메시지]
+2025-07-09 13:55:21.343 [clientInboundChannel-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [1]
+2025-07-09 13:55:21.343 [clientInboundChannel-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [35]
+2025-07-09 13:55:21.343 [clientInboundChannel-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [modric]
+2025-07-09 13:55:42.037 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:42.037 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:42.041 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:42.042 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:42.047 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:42.047 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:55:42.051 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:55:42.051 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:56:02.877 [http-nio-8080-exec-7] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@5a575cd9
+2025-07-09 13:56:02.878 [http-nio-8080-exec-7] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@400783cf
+2025-07-09 13:56:02.878 [http-nio-8080-exec-7] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=kaka22, loginPwd=kaka22
+2025-07-09 13:56:02.879 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-09 13:56:02.879 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaka22]
+2025-07-09 13:56:02.934 [http-nio-8080-exec-7] INFO  c.e.j.a.service.auth.AuthService - 로그인 성공, User: com.example.jpaprac.domain.entity.User@1c9d6a12
+2025-07-09 13:56:02.935 [http-nio-8080-exec-7] INFO  c.e.j.p.c.auth.AuthController - 로그인 성공 userResponse: com.example.jpaprac.presentation.dto.user.UserResponse@60f88bb5
+2025-07-09 13:56:03.517 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:03.517 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:03.518 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:56:03.520 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:56:03.523 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:03.523 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:03.525 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:56:03.526 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:56:03.529 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:03.529 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:03.534 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:03.534 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:08.102 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:08.102 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:08.106 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:08.107 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:08.111 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:08.111 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:08.115 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:08.116 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:10.130 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-09 13:56:10.131 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [1]
+2025-07-09 13:56:20.525 [clientInboundChannel-19] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        chats
+        (id, created_date, modified_date, message, room_id, sender_id, sender_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?)
+2025-07-09 13:56:20.525 [clientInboundChannel-19] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-07-09T13:56:20.525049]
+2025-07-09 13:56:20.525 [clientInboundChannel-19] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-07-09T13:56:20.525049]
+2025-07-09 13:56:20.526 [clientInboundChannel-19] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [난 kaka]
+2025-07-09 13:56:20.526 [clientInboundChannel-19] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [1]
+2025-07-09 13:56:20.526 [clientInboundChannel-19] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [36]
+2025-07-09 13:56:20.526 [clientInboundChannel-19] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [kaka]
+2025-07-09 13:56:40.313 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:40.314 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:40.318 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:40.318 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:40.323 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:40.323 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:40.327 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:40.327 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:42.020 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-09 13:56:42.020 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [2]
+2025-07-09 13:56:45.968 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:45.968 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:45.970 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:56:45.970 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:56:45.973 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:45.973 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:45.978 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:56:45.978 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:56:50.073 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:50.073 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:50.078 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:50.079 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:50.083 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:50.084 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:50.089 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:56:50.089 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:56:58.039 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-09 13:56:58.039 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaka의방]
+2025-07-09 13:57:09.485 [clientInboundChannel-21] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        chats
+        (id, created_date, modified_date, message, room_id, sender_id, sender_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?)
+2025-07-09 13:57:09.485 [clientInboundChannel-21] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-07-09T13:57:09.485537300]
+2025-07-09 13:57:09.485 [clientInboundChannel-21] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-07-09T13:57:09.485537300]
+2025-07-09 13:57:09.485 [clientInboundChannel-21] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [하이]
+2025-07-09 13:57:09.486 [clientInboundChannel-21] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [kaka의방]
+2025-07-09 13:57:09.486 [clientInboundChannel-21] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [36]
+2025-07-09 13:57:09.486 [clientInboundChannel-21] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [kaka]
+2025-07-09 13:57:12.823 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:12.824 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:57:12.830 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:12.831 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:57:12.835 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:12.836 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:57:12.840 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:12.841 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-09 13:57:22.510 [http-nio-8080-exec-1] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@2d5717b9
+2025-07-09 13:57:22.511 [http-nio-8080-exec-1] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@3160367c
+2025-07-09 13:57:22.511 [http-nio-8080-exec-1] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=modric, loginPwd=modric
+2025-07-09 13:57:22.512 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-09 13:57:22.512 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [modric]
+2025-07-09 13:57:22.513 [http-nio-8080-exec-1] WARN  c.e.j.a.service.auth.AuthService - 로그인 실패: 아이디/비밀번호 불일치 loginId=modric
+2025-07-09 13:57:22.514 [http-nio-8080-exec-1] WARN  c.e.j.p.c.auth.AuthController - 로그인 실패: 아이디와 비밀번호를 다시 확인해주세요
+2025-07-09 13:57:28.125 [http-nio-8080-exec-5] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@748c6481
+2025-07-09 13:57:28.126 [http-nio-8080-exec-5] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@47e234dc
+2025-07-09 13:57:28.126 [http-nio-8080-exec-5] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=modric10, loginPwd=modric10
+2025-07-09 13:57:28.127 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-09 13:57:28.128 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [modric10]
+2025-07-09 13:57:28.184 [http-nio-8080-exec-5] INFO  c.e.j.a.service.auth.AuthService - 로그인 성공, User: com.example.jpaprac.domain.entity.User@13a3da8a
+2025-07-09 13:57:28.185 [http-nio-8080-exec-5] INFO  c.e.j.p.c.auth.AuthController - 로그인 성공 userResponse: com.example.jpaprac.presentation.dto.user.UserResponse@453148f6
+2025-07-09 13:57:28.647 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:28.648 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:28.650 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:57:28.651 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:57:28.656 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:28.656 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:28.660 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-09 13:57:28.660 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-09 13:57:28.662 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:28.663 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:28.669 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:28.670 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:34.211 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:34.212 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:34.219 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:34.220 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:34.225 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:34.226 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:34.235 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-09 13:57:34.236 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [35]
+2025-07-09 13:57:40.768 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-09 13:57:40.769 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaka의방]
+2025-07-09 13:57:43.221 [clientInboundChannel-38] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        chats
+        (id, created_date, modified_date, message, room_id, sender_id, sender_name) 
+    values
+        (default, ?, ?, ?, ?, ?, ?)
+2025-07-09 13:57:43.221 [clientInboundChannel-38] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-07-09T13:57:43.220740600]
+2025-07-09 13:57:43.221 [clientInboundChannel-38] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-07-09T13:57:43.220740600]
+2025-07-09 13:57:43.222 [clientInboundChannel-38] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [하이]
+2025-07-09 13:57:43.222 [clientInboundChannel-38] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [kaka의방]
+2025-07-09 13:57:43.222 [clientInboundChannel-38] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [35]
+2025-07-09 13:57:43.222 [clientInboundChannel-38] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [modric]
+2025-07-09 14:25:15.532 [MessageBroker-9] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 5 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(5)-CONNECTED(5)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 60], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 16], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 434]
+2025-07-09 14:55:15.537 [MessageBroker-7] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 5 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(5)-CONNECTED(5)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 63], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 17], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 802]
+2025-07-09 15:25:15.550 [MessageBroker-7] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 5 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(5)-CONNECTED(5)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 63], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 17], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 1163]
+2025-07-09 15:55:15.565 [MessageBroker-12] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 5 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(5)-CONNECTED(5)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 63], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 17], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 1524]
+2025-07-14 10:26:29.340 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Starting JpapracApplication using Java 11.0.26 on DESKTOP-3C210OV with PID 14052 (C:\Users\mcst\Desktop\jpa-react-prac\jpaprac\build\classes\java\main started by mcst in C:\Users\mcst\Desktop\jpa-react-prac\jpaprac)
+2025-07-14 10:26:29.342 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 10:26:29.385 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-14 10:26:29.385 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-14 10:26:30.025 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-14 10:26:30.096 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 5 JPA repository interfaces.
+2025-07-14 10:26:30.690 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-14 10:26:30.700 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 10:26:30.705 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-14 10:26:30.705 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-14 10:26:30.793 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-14 10:26:30.794 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1408 ms
+2025-07-14 10:26:30.818 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-14 10:26:30.909 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-14 10:26:30.919 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/test'
+2025-07-14 10:26:31.128 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-14 10:26:31.178 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-07-14 10:26:31.316 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-14 10:26:31.433 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-07-14 10:26:31.971 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-14 10:26:31.980 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-14 10:26:32.643 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-14 10:26:32.865 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fc74486, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@547cac39, org.springframework.security.web.context.SecurityContextPersistenceFilter@1abeb506, org.springframework.security.web.header.HeaderWriterFilter@5669ea3e, org.springframework.web.filter.CorsFilter@4b5893ad, org.springframework.security.web.authentication.logout.LogoutFilter@1276124b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@514dae1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b9fcdc0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67d5d019, org.springframework.security.web.session.SessionManagementFilter@53d65ede, org.springframework.security.web.access.ExceptionTranslationFilter@647be472, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58b0496d]
+2025-07-14 10:26:33.113 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-07-14 10:26:33.122 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 10:26:33.141 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-14 10:26:33.142 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-07-14 10:26:33.143 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@71e9d2ea]]
+2025-07-14 10:26:33.143 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-07-14 10:26:33.150 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Started JpapracApplication in 4.233 seconds (JVM running for 4.631)
+2025-07-14 10:27:32.903 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-07-14 10:27:43.700 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 10:27:43.700 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-14 10:27:43.701 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-14 10:28:02.188 [http-nio-8080-exec-6] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@1d3f2a64
+2025-07-14 10:28:02.198 [http-nio-8080-exec-6] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@77e9b0f5
+2025-07-14 10:28:02.198 [http-nio-8080-exec-6] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=kaka22, loginPwd=kaka22
+2025-07-14 10:28:02.217 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-14 10:28:02.219 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaka22]
+2025-07-14 10:28:02.300 [http-nio-8080-exec-6] INFO  c.e.j.a.service.auth.AuthService - 로그인 성공, User: com.example.jpaprac.domain.entity.User@b8d4f0
+2025-07-14 10:28:02.360 [http-nio-8080-exec-6] INFO  c.e.j.p.c.auth.AuthController - 로그인 성공 userResponse: com.example.jpaprac.presentation.dto.user.UserResponse@7810f9db
+2025-07-14 10:28:03.047 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-14 10:28:03.048 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-14 10:28:03.055 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:03.056 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:03.066 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-14 10:28:03.066 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-14 10:28:03.066 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:03.067 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:03.072 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:03.072 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:03.079 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:03.080 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:08.955 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:08.956 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:08.963 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:08.963 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:08.969 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:08.970 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:08.976 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 10:28:08.976 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 10:28:11.105 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-14 10:28:11.107 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [1]
+2025-07-14 10:57:32.914 [MessageBroker-11] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 424]
+2025-07-14 11:27:32.931 [MessageBroker-11] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 787]
+2025-07-14 11:57:32.948 [MessageBroker-8] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 1148]
+2025-07-14 13:01:35.800 [MessageBroker-10] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 2, queued tasks = 0, completed tasks = 1509]
+2025-07-14 13:01:52.703 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m20s11ms433µs100ns).
+2025-07-14 13:10:58.053 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Starting JpapracApplication using Java 11.0.26 on DESKTOP-3C210OV with PID 16676 (C:\Users\mcst\Desktop\jpa-react-prac\jpaprac\build\classes\java\main started by mcst in C:\Users\mcst\Desktop\jpa-react-prac\jpaprac)
+2025-07-14 13:10:58.054 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 13:10:58.094 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-14 13:10:58.094 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-14 13:10:58.729 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-14 13:10:58.802 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2025-07-14 13:10:59.373 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-14 13:10:59.380 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 13:10:59.382 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-14 13:10:59.382 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-14 13:10:59.456 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-14 13:10:59.457 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1362 ms
+2025-07-14 13:10:59.479 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-14 13:10:59.554 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-14 13:10:59.563 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/test'
+2025-07-14 13:10:59.740 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-14 13:10:59.795 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-07-14 13:10:59.948 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-14 13:11:00.062 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-07-14 13:11:00.606 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-14 13:11:00.614 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-14 13:11:01.293 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-14 13:11:01.516 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fe450d8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1738dde8, org.springframework.security.web.context.SecurityContextPersistenceFilter@47dcf6c, org.springframework.security.web.header.HeaderWriterFilter@54c4cff9, org.springframework.web.filter.CorsFilter@639f4891, org.springframework.security.web.authentication.logout.LogoutFilter@6a81fec0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a1e1d6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76b9af5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1556308d, org.springframework.security.web.session.SessionManagementFilter@353f031b, org.springframework.security.web.access.ExceptionTranslationFilter@2664bafd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@614ac1df]
+2025-07-14 13:11:01.738 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-07-14 13:11:01.746 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 13:11:01.761 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-14 13:11:01.763 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-07-14 13:11:01.763 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@17484e14]]
+2025-07-14 13:11:01.763 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-07-14 13:11:01.769 [restartedMain] INFO  c.example.jpaprac.JpapracApplication - Started JpapracApplication in 4.098 seconds (JVM running for 4.503)
+2025-07-14 13:12:01.544 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-07-14 13:42:01.549 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-07-14 14:12:01.562 [MessageBroker-2] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2025-07-14 14:42:01.579 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2025-07-14 14:56:28.812 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 14:56:28.812 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-14 14:56:28.813 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-14 14:56:34.146 [http-nio-8080-exec-7] INFO  c.e.j.p.c.auth.AuthController - 로그인 요청: com.example.jpaprac.presentation.dto.auth.LoginUserRequest@5037ac07
+2025-07-14 14:56:34.155 [http-nio-8080-exec-7] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: com.example.jpaprac.presentation.dto.auth.LoginUserCommand@98d9ddf
+2025-07-14 14:56:34.155 [http-nio-8080-exec-7] INFO  c.e.j.a.service.auth.AuthService - 서비스 login 호출: loginId=kaka22, loginPwd=kaka22
+2025-07-14 14:56:34.176 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_,
+        user0_.created_date as created_2_3_,
+        user0_.modified_date as modified3_3_,
+        user0_.email as email4_3_,
+        user0_.login_id as login_id5_3_,
+        user0_.login_pwd as login_pw6_3_,
+        user0_.name as name7_3_,
+        user0_.role as role8_3_ 
+    from
+        users user0_ 
+    where
+        user0_.login_id=?
+2025-07-14 14:56:34.178 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaka22]
+2025-07-14 14:56:34.248 [http-nio-8080-exec-7] INFO  c.e.j.a.service.auth.AuthService - 로그인 성공, User: com.example.jpaprac.domain.entity.User@ec9555e
+2025-07-14 14:56:34.309 [http-nio-8080-exec-7] INFO  c.e.j.p.c.auth.AuthController - 로그인 성공 userResponse: com.example.jpaprac.presentation.dto.user.UserResponse@7e093d3e
+2025-07-14 14:56:35.737 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-14 14:56:35.738 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-14 14:56:35.745 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:35.746 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:35.757 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:35.757 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        board0_.id as id1_0_0_,
+        user1_.id as id1_3_1_,
+        board0_.created_date as created_2_0_0_,
+        board0_.modified_date as modified3_0_0_,
+        board0_.content as content4_0_0_,
+        board0_.deleteyn as deleteyn5_0_0_,
+        board0_.title as title6_0_0_,
+        board0_.user_id as user_id7_0_0_,
+        user1_.created_date as created_2_3_1_,
+        user1_.modified_date as modified3_3_1_,
+        user1_.email as email4_3_1_,
+        user1_.login_id as login_id5_3_1_,
+        user1_.login_pwd as login_pw6_3_1_,
+        user1_.name as name7_3_1_,
+        user1_.role as role8_3_1_ 
+    from
+        boards board0_ 
+    inner join
+        users user1_ 
+            on board0_.user_id=user1_.id 
+    where
+        board0_.deleteyn=?
+2025-07-14 14:56:35.758 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:35.758 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [N]
+2025-07-14 14:56:35.764 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:35.765 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:35.771 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:35.771 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:40.762 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:40.763 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:40.767 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:40.767 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:40.771 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:40.772 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:40.776 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        user0_.id as id1_3_0_,
+        user0_.created_date as created_2_3_0_,
+        user0_.modified_date as modified3_3_0_,
+        user0_.email as email4_3_0_,
+        user0_.login_id as login_id5_3_0_,
+        user0_.login_pwd as login_pw6_3_0_,
+        user0_.name as name7_3_0_,
+        user0_.role as role8_3_0_ 
+    from
+        users user0_ 
+    where
+        user0_.id=?
+2025-07-14 14:56:40.777 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [36]
+2025-07-14 14:56:47.884 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        chat0_.id as id1_1_,
+        chat0_.created_date as created_2_1_,
+        chat0_.modified_date as modified3_1_,
+        chat0_.message as message4_1_,
+        chat0_.room_id as room_id5_1_,
+        chat0_.sender_id as sender_i6_1_,
+        chat0_.sender_name as sender_n7_1_ 
+    from
+        chats chat0_ 
+    where
+        chat0_.room_id=? 
+    order by
+        chat0_.created_date ASC
+2025-07-14 14:56:47.885 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [1]
+2025-07-14 15:12:01.592 [MessageBroker-11] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 223]
+2025-07-14 15:42:01.607 [MessageBroker-5] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 620]
+2025-07-14 16:12:01.608 [MessageBroker-4] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 981]
+2025-07-14 16:42:01.613 [MessageBroker-5] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 1342]
+2025-07-14 17:12:01.623 [MessageBroker-9] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 1703]

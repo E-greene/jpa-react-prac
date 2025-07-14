@@ -81,7 +81,7 @@ public class AuthController {
             //SecurityContext에 저장
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 
-            //4. 세션에 SecurityContext 저장(JSSENIONID 쿠키 발급를 위함)
+            //4. 세션에 SecurityContext 저장(JSESSIONID 쿠키 발급를 위함)
             HttpSession session = request.getSession(true);
             session.setAttribute(
                     HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,

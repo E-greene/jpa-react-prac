@@ -40,10 +40,7 @@ public class ChatController {
     @GetMapping("/room/{roomId}")
     public ResponseEntity<ApiResponse<List<ChatResponse>>> getChatsByRoom(@PathVariable String roomId) {
         try {
-            List<ChatResponse> responses = chatService.getChatsByRoomId(roomId)
-                    .stream()
-                    .map(ChatResponse::fromEntity)
-                    .collect(Collectors.toList());
+            List<ChatResponse> responses = chatService.getChatsByRoomId(roomId);
             return ResponseEntity.ok(ApiResponse.success("채팅 내역 조회 성공", responses));
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(ApiResponse.error("채팅 내역 조회 실패"));
