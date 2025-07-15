@@ -1,0 +1,71 @@
+
+services:
+  backend1:
+    build: ./jpaprac
+    container_name: spring-backend-1
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_REDIS_HOST=redis
+    depends_on:
+      - redis
+    networks:
+      - chatnet
+
+  backend2:
+    build: ./jpaprac
+    container_name: spring-backend-2
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_REDIS_HOST=redis
+    depends_on:
+      - redis
+    networks:
+      - chatnet
+
+  backend3:
+    build: ./jpaprac
+    container_name: spring-backend-3
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_REDIS_HOST=redis
+    depends_on:
+      - redis
+    networks:
+      - chatnet
+
+  frontend:
+    build: ./reactprac
+    container_name: react-frontend
+    depends_on:
+      - backend1
+      - backend2
+      - backend3
+    networks:
+      - chatnet
+
+  redis:
+    image: redis:7
+    container_name: redis-server
+    ports:
+      - "6379:6379"
+    networks:
+      - chatnet
+
+  nginx:
+    image: nginx:stable
+    container_name: nginx-lb
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - frontend
+      - backend1
+      - backend2
+      - backend3
+    networks:
+      - chatnet
+
+networks:
+  chatnet:
+    driver: bridge
