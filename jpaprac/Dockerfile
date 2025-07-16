@@ -14,7 +14,7 @@ FROM eclipse-temurin:11-jre
 # 실행 디렉토리
 WORKDIR /app
 # jar 복사
-COPY --from=build /workspace/app/build/libs/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 # 8080포트 오픈 (Springboot 기본)
 EXPOSE 8080
 # 컨테이너 실행 시 jar 파일 실행

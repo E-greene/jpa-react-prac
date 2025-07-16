@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
@@ -17,7 +20,7 @@ public class SecurityConfig {
                 .cors()
                 .and()
                 .authorizeRequests()
-                    .antMatchers("/auths/signUp","/auths/login","/ws/**").permitAll()
+                    .antMatchers("/auths/signUp","/auths/login","/ws/**", "/h2-console/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                 .formLogin().disable()
@@ -31,4 +34,5 @@ public class SecurityConfig {
                     .permitAll();
         return http.build();
     }
+
 }
