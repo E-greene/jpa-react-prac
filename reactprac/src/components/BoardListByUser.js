@@ -10,7 +10,7 @@ const BoardListByUser = () => {
     
     useEffect(() => {
         
-        axios.get(`http://localhost:8080/users/my/boards`, { withCredentials: true })
+        axios.get(`/users/my/boards`, { withCredentials: true })
             .then((res) => {
                 setBoards(res.data.data);
             })

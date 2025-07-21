@@ -13,7 +13,7 @@ const BoardDetail = () => {
     useEffect(() => {
         if(!user) return;
 
-        axios.get(`http://localhost:8080/boards/${boardId}`, { withCredentials: true })
+        axios.get(`/boards/${boardId}`, { withCredentials: true })
             .then(res => setBoard(res.data.data))
             .catch(err => {
                 // 백엔드에서 401, 403이 온 경우 로그인 페이지로 이동

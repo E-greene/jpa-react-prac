@@ -11,7 +11,7 @@ const Home = () => {
     useEffect(() => {
         console.log("Home component render!");
 
-        axios.get(`http://localhost:8080/boards`, { withCredentials: true })
+        axios.get(`/boards`, { withCredentials: true })
             .then((res) => {
                 setBoards(Array.isArray(res.data.data) ? res.data.data : []);
             })

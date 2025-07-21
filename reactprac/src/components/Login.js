@@ -12,7 +12,7 @@ function Login() {
         e.preventDefault();
         //로그인요청 보내기
         console.log("로그인시 보낼 값:", loginId, loginPwd);
-        axios.post("http://localhost:8080/auths/login", {
+        axios.post("/api/auth/login", {
             loginId,
             loginPwd
         },

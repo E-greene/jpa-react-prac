@@ -60,7 +60,7 @@ const EditBoard = () => {
     const handleDelete = async () => {
         if(window.confirm("정말로 삭제하시겠습니까?")) {
             try {
-                await axios.delete(`http://localhost:8080/boards/${boardId}`, {
+                await axios.delete(`/boards/${boardId}`, {
                     withCredentials: true
                 });
                 alert("게시글이 삭제되었습니다.");

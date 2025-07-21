@@ -21,12 +21,12 @@ const ChattingComponent: React.FC = () => {
   useEffect(() => {
     if (!joined || !roomId || !user) return;
 
-    const socket = new SockJS('http://localhost:8080/ws');
+    const socket = new SockJS('/ws');
     const stompClient = Stomp.over(socket);
     stompClientRef.current = stompClient;
 
     stompClient.connect({}, () => {
-      fetch(`http://localhost:8080/chats/room/${roomId}`, {
+      fetch(`/chats/room/${roomId}`, {
         credentials: 'include',
       })
         .then(res => res.json())

@@ -8,7 +8,7 @@ const UserMenu = () => {
     const handleLogout = async () => {
         
         try {
-            await axios.post("http://localhost:8080/auths/logout", {}, {
+            await axios.post("/api/auth/logout", {}, {
                 withCredentials: true,
             });
 

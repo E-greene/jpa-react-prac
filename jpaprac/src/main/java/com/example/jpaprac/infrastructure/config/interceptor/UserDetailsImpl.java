@@ -1,4 +1,4 @@
-package com.example.jpaprac.domain.security;
+package com.example.jpaprac.infrastructure.config.interceptor;
 
 import com.example.jpaprac.domain.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +9,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
-public class CustomUserDetails implements UserDetails {
+public class UserDetailsImpl implements UserDetails {
 
     private final User user;
 
     @Autowired
-    public CustomUserDetails(User user) {
+    public UserDetailsImpl(User user) {
         this.user = user;
     }
 

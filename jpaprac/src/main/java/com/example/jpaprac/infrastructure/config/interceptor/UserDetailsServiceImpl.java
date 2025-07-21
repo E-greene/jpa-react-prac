@@ -1,9 +1,7 @@
-package com.example.jpaprac.application.service.security;
+package com.example.jpaprac.infrastructure.config.interceptor;
 
 import com.example.jpaprac.domain.entity.User;
 import com.example.jpaprac.domain.repository.auth.AuthRepository;
-import com.example.jpaprac.domain.repository.user.UserRepository;
-import com.example.jpaprac.domain.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -11,12 +9,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final AuthRepository authRepository;
 
     @Autowired
-    public CustomUserDetailsService(AuthRepository authRepository) {
+    public UserDetailsServiceImpl(AuthRepository authRepository) {
         this.authRepository = authRepository;
     }
 
@@ -26,6 +24,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         if(user == null) {
             throw new UsernameNotFoundException("사용자를 찾을 수 없습니다 : " + loginId);
         }
-        return new CustomUserDetails(user);
+        return new UserDetailsImpl(user);
     }
 }

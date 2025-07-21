@@ -12,7 +12,7 @@ function Singin() {
 
     const handleSignup = (e) => {
         e.preventDefault(); // 폼 기본제출 방지
-        axios.post("http://localhost:8080/auths/signUp", {
+        axios.post("/api/auth/signUp", {
             loginId,
             loginPwd,
             name,

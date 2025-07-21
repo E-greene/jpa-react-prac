@@ -8,7 +8,7 @@ export default function useAuthCheck() {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/auths/me", { withCredentials: true })
+    axios.get("/api/auth/me", { withCredentials: true })
         .then((res) => {
           console.log("✅ user info:", res.data.data);
           console.log("🔎 role field:", res.data.data.role);

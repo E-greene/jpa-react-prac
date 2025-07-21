@@ -23,7 +23,7 @@ const CreateBoard = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:8080/boards", {
+            const response = await axios.post("/boards", {
                 title,
                 content
             },
