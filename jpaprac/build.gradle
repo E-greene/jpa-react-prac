@@ -34,7 +34,8 @@ dependencies {
 	//implementation 'com.fasterxml.jackson.core:jackson-databind'
 	//implementation 'org.redisson:redisson-spring-boot-starter:3.27.2'
 
-	implementation 'com.h2database:h2'
+	//implementation 'com.h2database:h2'
+	implementation 'com.oracle.database.jdbc:ojdbc8:19.3.0.0'
 
 }
 

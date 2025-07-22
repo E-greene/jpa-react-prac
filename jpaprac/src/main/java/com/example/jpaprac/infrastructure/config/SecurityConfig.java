@@ -24,12 +24,12 @@ public class SecurityConfig {
                 .cors()
                 .and()
                 .authorizeRequests()
-                    .antMatchers("/auths/signUp","/auths/login","/ws/**", "/h2-console/**").permitAll()
+                    .antMatchers("/api/auth/signUp","/api/auth/login","/ws/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                 .formLogin().disable()
                 .logout()
-                    .logoutUrl("/auths/logout")
+                    .logoutUrl("/api/auth/logout")
                     .logoutSuccessHandler(((request, response, authentication) -> {
                         response.setStatus(200); // 200 OK로 응답
                     }))

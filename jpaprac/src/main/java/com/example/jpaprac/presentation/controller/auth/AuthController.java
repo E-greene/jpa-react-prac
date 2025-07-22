@@ -10,7 +10,6 @@ import com.example.jpaprac.presentation.dto.auth.LoginUserCommand;
 import com.example.jpaprac.presentation.dto.auth.LoginUserRequest;
 import com.example.jpaprac.presentation.dto.auth.UserInfoResponse;
 import com.example.jpaprac.presentation.dto.user.*;
-import org.h2.command.ddl.CreateUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

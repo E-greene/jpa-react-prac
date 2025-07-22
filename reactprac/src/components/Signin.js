@@ -22,7 +22,7 @@ function Singin() {
             navigate('/login');
         }).catch((err) => {
             console.error(err);
-            alert(err.response? err.response.data : "회원가입 실패");
+            alert(err.response? err.response.data.message : "회원가입 실패");
         });
     }
 

@@ -4,12 +4,16 @@ import axios from 'axios';
 import useAuthCheck from './hook/useAuthCheck';
 
 const Home = () => {
-    useAuthCheck();
+    const user = useAuthCheck();
     const navigate = useNavigate();
     const [boards, setBoards] = useState([]);
     
     useEffect(() => {
         console.log("Home component render!");
+
+        if(!user) {
+            return;
+        }
 
         axios.get(`/boards`, { withCredentials: true })
             .then((res) => {

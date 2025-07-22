@@ -11,7 +11,8 @@ import java.util.List;
 public class Comment extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COMMENT_SEQ_GENERATOR")
+    @SequenceGenerator(name = "COMMENT_SEQ_GENERATOR", sequenceName = "COMMENT_SEQ", allocationSize = 1)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

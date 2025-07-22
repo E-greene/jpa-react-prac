@@ -10,7 +10,8 @@ import javax.persistence.*;
 public class User extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ_GENERATOR") //auto_increment
+    @SequenceGenerator(name = "USER_SEQ_GENERATOR", sequenceName = "USER_SEQ", allocationSize = 1)
     private Long id;
 
     @Column(nullable = false)
@@ -19,10 +20,10 @@ public class User extends BaseTimeEntity {
     @Column
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "login_id", nullable = false, unique = true)
     private String loginId;
 
-    @Column(nullable = false)
+    @Column(name = "login_pwd", nullable = false)
     private String loginPwd;
 
     @Enumerated(EnumType.STRING) // db에 문자열로 저장하기 위함

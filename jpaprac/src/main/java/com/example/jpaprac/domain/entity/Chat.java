@@ -8,7 +8,9 @@ import javax.persistence.*;
 @Table(name = "chats")
 public class Chat extends BaseTimeEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CHAT_SEQ_GENERATOR")
+    @SequenceGenerator(name = "CHAT_SEQ_GENERATOR", sequenceName = "CHAT_SEQ", allocationSize = 1)
     private Long id;
 
     @Column(nullable = false)
