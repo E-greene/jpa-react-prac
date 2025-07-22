@@ -8,6 +8,7 @@ services:
       - SPRING_REDIS_HOST=redis
     depends_on:
       - redis
+      - oracle-db
     networks:
       - chatnet
 
@@ -19,6 +20,7 @@ services:
       - SPRING_REDIS_HOST=redis
     depends_on:
       - redis
+      - oracle-db
     networks:
       - chatnet
 
@@ -30,6 +32,7 @@ services:
       - SPRING_REDIS_HOST=redis
     depends_on:
       - redis
+      - oracle-db
     networks:
       - chatnet
 
@@ -48,6 +51,16 @@ services:
     container_name: redis-server
     ports:
       - "6379:6379"
+    networks:
+      - chatnet
+
+  oracle-db:
+    image: oracleinanutshell/oracle-xe-11g
+    container_name: oracle-db
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
     networks:
       - chatnet
 

@@ -6,9 +6,9 @@ http {
 
   upstream backend_servers {
     # Spring Boot 멀티 인스턴스 8080포트
-    server backend1:8081;
-    server backend2:8081;
-    server backend3:8081;
+    server backend1:8080;
+    server backend2:8080;
+    server backend3:8080;
   }
   server {
     listen 80;

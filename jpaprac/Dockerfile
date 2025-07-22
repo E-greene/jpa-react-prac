@@ -16,6 +16,6 @@ WORKDIR /app
 # jar 복사
 COPY --from=build /app/build/libs/*.jar app.jar
 # 8080포트 오픈 (Springboot 기본)
-EXPOSE 8080
+EXPOSE 8081
 # 컨테이너 실행 시 jar 파일 실행
 ENTRYPOINT ["java", "-jar", "app.jar"]
